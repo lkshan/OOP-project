@@ -1,0 +1,207 @@
+package logistika;/**
+ * Created by lukashanincik on 17/03/2017.
+ */
+
+import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import logistika.map.Cities;
+import logistika.orderlist.Order;
+import logistika.orderlist.OrderList;
+
+import java.io.IOException;
+
+public class Main extends Application {
+    private static Stage primaryStage;
+    private static BorderPane mainLayout;
+
+    private static TableView<echoOrder> OLTV;
+
+    @Override
+    public void start(Stage primaryStage) throws IOException {
+        this.primaryStage = primaryStage;
+        this.primaryStage.setTitle("Welcome to my world");
+
+        showMainView();
+        showMainItems();
+    }
+
+    private void showMainView() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("view/MainView.fxml"));
+        mainLayout = loader.load();
+        Scene scene = new Scene(mainLayout, 800, 600);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public static void showMainItems() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("view/MainItems.fxml"));
+        BorderPane mainItems = loader.load();
+        mainLayout.setCenter(mainItems);
+    }
+
+    public static void showStoragesScene() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("storage/Storage.fxml"));
+        BorderPane storage = loader.load();
+        mainLayout.setCenter(storage);
+    }
+
+    public static void showOrderlistScene() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("orderlist/Orderlist.fxml"));
+        BorderPane orderlist = loader.load();
+        mainLayout.setCenter(orderlist);
+    }
+
+    public static void showAddStorage() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("view/AddNewStorage.fxml"));
+        BorderPane addNewStorage = loader.load();
+
+        Stage dialogStage = new Stage();
+        dialogStage.setTitle("New storage");
+        dialogStage.initModality(Modality.WINDOW_MODAL);
+        dialogStage.initOwner(primaryStage);
+        Scene scene = new Scene(addNewStorage);
+        dialogStage.setScene(scene);
+        dialogStage.showAndWait();
+    }
+
+    public static void showOrderTableView()throws IOException{
+
+        TableColumn<echoOrder, Integer> idColumn = new TableColumn<>("ID");
+        idColumn.setCellValueFactory(new PropertyValueFactory<echoOrder, Integer>("id"));
+
+        TableColumn<echoOrder, String> DelFromColumn = new TableColumn<>("Delivery From");
+        DelFromColumn.setCellValueFactory(new PropertyValueFactory<echoOrder, String>("from"));
+
+        TableColumn<echoOrder, String> DelToColumn = new TableColumn<>("Delivery To");
+        DelToColumn.setCellValueFactory(new PropertyValueFactory<echoOrder, String>("to"));
+
+        TableColumn<echoOrder, Integer> DistColumn = new TableColumn<>("Distance");
+        DistColumn.setCellValueFactory(new PropertyValueFactory<echoOrder, Integer>("dist"));
+
+        TableColumn<echoOrder, Integer> WeightColumn = new TableColumn<>("Weight");
+        WeightColumn.setCellValueFactory(new PropertyValueFactory<echoOrder, Integer>("weight"));
+
+        OLTV = new TableView<>();
+        OLTV.setPrefWidth(500);
+        OLTV.setMaxHeight(280);
+        OLTV.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        OLTV.setItems(getOrders());
+        OLTV.getColumns().addAll(idColumn, DelFromColumn, DelToColumn, DistColumn, WeightColumn);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("orderlist/Orderlist.fxml"));
+        BorderPane orderlist = loader.load();
+        orderlist.setCenter(OLTV);
+        mainLayout.setCenter(orderlist);
+    }
+    public static class echoOrder{
+        private int id;
+        private String from = new String();
+        private String to = new String();
+        private int dist;
+        private int weight;
+        private Cities source;
+        private Cities destination;
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int ID) {
+            this.id = ID;
+        }
+
+        public Cities getSource() {
+            return source;
+        }
+
+        public void setSource(Cities source) {
+            this.source = source;
+        }
+
+        public Cities getDestination() {
+            return destination;
+        }
+
+        public void setDestination(Cities destination) {
+            this.destination = destination;
+        }
+
+        public String getFrom() {
+            return from;
+        }
+
+        public void setFrom(String from) {
+            this.from = from;
+        }
+
+        public String getTo() {
+            return to;
+        }
+
+        public void setTo(String to) {
+            this.to = to;
+        }
+
+        public int getDist() {
+            return dist;
+        }
+
+        public void setDist(int dist) {
+            this.dist = dist;
+        }
+
+        public int getWeight() {
+            return weight;
+        }
+
+        public void setWeight(int weight) {
+            this.weight = weight;
+        }
+
+        public echoOrder(int id, String from, String to, int dist, int weight, Cities source, Cities destination) {
+            this.id = id;
+            this.from = from;
+            this.to = to;
+            this.dist = dist;
+            this.weight = weight;
+            this.source = source;
+            this.destination = destination;
+        }
+    }
+
+    public static ObservableList<echoOrder> getOrders() throws IOException {
+        OrderList orderList = new OrderList();
+        Cities city = new Cities();
+        city.setName("Svidnik");
+        city.setX(1);
+        city.setY(8);
+        orderList.createOrderList(city);
+        ObservableList<echoOrder> OrderListOBS = FXCollections.observableArrayList();
+        int i = 0;
+        for (Order order : orderList.getObjednavky()){
+            echoOrder newOrder = new echoOrder(++i, order.getZdroj().getName(), order.getDestinacia().getName(), order.getVzdialenost(), order.getHmotnost(), order.getZdroj(), order.getDestinacia());
+            OrderListOBS.add(newOrder);
+        }
+        return OrderListOBS;
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+}
