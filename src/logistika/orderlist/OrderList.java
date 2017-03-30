@@ -3,13 +3,18 @@ package logistika.orderlist;
 /**
  * Created by lukashanincik on 21/03/2017.
  */
+import javafx.fxml.FXML;
+import logistika.DBConnection;
+import logistika.Main;
 import logistika.map.Cities;
 import logistika.map.WorldMap;
 
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Random;
@@ -21,7 +26,11 @@ import static java.lang.Math.pow;
  * Created by lukashanincik on 09/03/2017.
  */
 public class OrderList {
-    private ArrayList<Order> Objednavky = new ArrayList<Order>();
+
+    @FXML
+    private javafx.scene.control.TextField selectOrderTextFIeld;
+    private Main main;
+    private static ArrayList<Order> Objednavky = new ArrayList<Order>();
 
     public ArrayList<Order> getObjednavky() {
         return Objednavky;
@@ -32,14 +41,14 @@ public class OrderList {
         int i, rand;
         Cities zdroj = new Cities();
         Cities destinacia = new Cities();
-        int hmotnost, vzdialenost;
+        int typ, vzdialenost;
         for (i = 0; i < 10; i++) {
             rand = randCity();
             Cities mesto = new Cities();
             mesto = map.getCities().get(rand-1);
             destinacia = mesto;
             zdroj = city;
-            hmotnost = randInt(2000, 200);
+            typ = randInt(5, 1);
             //
             int a, b;
             double ab;
@@ -48,7 +57,7 @@ public class OrderList {
             ab = Math.pow(a, 2) + Math.pow(b, 2);
             vzdialenost = (int) Math.round( Math.sqrt(ab) );
             //
-            Order order = new Order(hmotnost, vzdialenost, zdroj, destinacia);
+            Order order = new Order(typ, vzdialenost, zdroj, destinacia);
             Objednavky.add(order);
         }
     }
@@ -84,7 +93,7 @@ public class OrderList {
             System.out.println(i + ".");
             System.out.println("Z  : " + objednavka.getZdroj().getName());
             System.out.println("Do : " + objednavka.getDestinacia().getName());
-            System.out.println("Hmotnost : " + objednavka.getHmotnost());
+            System.out.println("Typ : " + objednavka.getTyp());
             System.out.println("Vzdialenost : " + objednavka.getVzdialenost());
             System.out.println();
         }
@@ -98,5 +107,44 @@ public class OrderList {
         this.Objednavky.remove(objednavka);
     }
 
+    public void selectOrder() throws SQLException, IOException {
+        if (selectOrderTextFIeld.getText().equals("")){
+            System.out.println("Zadaj cislo objednavky");
+        }
+        else {
+            DBConnection connection = new DBConnection();
+            int id=0;
+            for (int i = 0; i < selectOrderTextFIeld.getText().length(); i++){
+                char c = selectOrderTextFIeld.getText().charAt(i);
+                int tempt=0;
+                tempt = (int) c;
+                tempt -= 48;
+                id += tempt * pow(10, (selectOrderTextFIeld.getText().length() - i)-1);
+            }
+            if (id <= Objednavky.size()) {
+                //System.out.println(id);
+                //Order selectedOrder = new Order(Objednavky.get(id-1).getTyp(), Objednavky.get(id-1).getVzdialenost(), Objednavky.get(id-1).getZdroj(), Objednavky.get(id-1).getDestinacia());
+                //Objednavky.get(id-1);
+                printOrders();
+                Order selectedOrder = Objednavky.get(id - 1);
+                connection.insertNewOrder(selectedOrder);
+                Objednavky.remove(id - 1);
+                main.showOrderTableView();
+            }
+            else System.out.println("Nevhodne cislo objednavky");
+        }
+    }
+
+    public static int h2d(String s) {
+        String digits = "0123456789ABCDEF";
+        s = s.toUpperCase();
+        int val = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            int d = digits.indexOf(c);
+            val = 16*val + d;
+        }
+        return val;
+    }
 }
 

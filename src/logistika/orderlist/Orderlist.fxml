@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logistika.orderlist.OrderListController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logistika.orderlist.OrderList">
    <top>
       <Label text="Order List" BorderPane.alignment="CENTER">
          <font>
@@ -27,8 +27,8 @@
               </rowConstraints>
                <children>
                   <Label text="Which one do you want accept?" />
-                  <TextField GridPane.columnIndex="1" />
-                  <Button mnemonicParsing="false" text="Accept" GridPane.columnIndex="2" />
+                  <TextField fx:id="selectOrderTextFIeld" GridPane.columnIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#selectOrder" text="Accept" GridPane.columnIndex="2" />
                </children>
             </GridPane>
          </children>

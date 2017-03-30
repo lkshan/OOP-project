@@ -26,6 +26,7 @@ public class Main extends Application {
 
     private static TableView<echoOrder> OLTV;
 
+    private static int firstStart = 0;
     @Override
     public void start(Stage primaryStage) throws IOException {
         this.primaryStage = primaryStage;
@@ -93,8 +94,8 @@ public class Main extends Application {
         TableColumn<echoOrder, Integer> DistColumn = new TableColumn<>("Distance");
         DistColumn.setCellValueFactory(new PropertyValueFactory<echoOrder, Integer>("dist"));
 
-        TableColumn<echoOrder, Integer> WeightColumn = new TableColumn<>("Weight");
-        WeightColumn.setCellValueFactory(new PropertyValueFactory<echoOrder, Integer>("weight"));
+        TableColumn<echoOrder, Integer> WeightColumn = new TableColumn<>("Type");
+        WeightColumn.setCellValueFactory(new PropertyValueFactory<echoOrder, Integer>("type"));
 
         OLTV = new TableView<>();
         OLTV.setPrefWidth(500);
@@ -113,7 +114,7 @@ public class Main extends Application {
         private String from = new String();
         private String to = new String();
         private int dist;
-        private int weight;
+        private String type;
         private Cities source;
         private Cities destination;
 
@@ -165,20 +166,20 @@ public class Main extends Application {
             this.dist = dist;
         }
 
-        public int getWeight() {
-            return weight;
+        public String  getType() {
+            return type;
         }
 
-        public void setWeight(int weight) {
-            this.weight = weight;
+        public void setType(String type) {
+            this.type = type;
         }
 
-        public echoOrder(int id, String from, String to, int dist, int weight, Cities source, Cities destination) {
+        public echoOrder(int id, String from, String to, int dist, String type, Cities source, Cities destination) {
             this.id = id;
             this.from = from;
             this.to = to;
             this.dist = dist;
-            this.weight = weight;
+            this.type = type;
             this.source = source;
             this.destination = destination;
         }
@@ -190,11 +191,27 @@ public class Main extends Application {
         city.setName("Svidnik");
         city.setX(1);
         city.setY(8);
-        orderList.createOrderList(city);
+        //orderList.createOrderList(city);
+        if (firstStart == 0) {
+            orderList.createOrderList(city);
+            firstStart = 1;
+        }
+            else {
+            orderList.getObjednavky();
+        }
         ObservableList<echoOrder> OrderListOBS = FXCollections.observableArrayList();
         int i = 0;
+
         for (Order order : orderList.getObjednavky()){
-            echoOrder newOrder = new echoOrder(++i, order.getZdroj().getName(), order.getDestinacia().getName(), order.getVzdialenost(), order.getHmotnost(), order.getZdroj(), order.getDestinacia());
+            String typ = new String();
+            switch (order.getTyp()){
+                case 1: typ = "Mraziarne"; break;
+                case 2: typ = "Palivo"; break;
+                case 3: typ = "Chemikalie"; break;
+                case 4: typ = "Palety"; break;
+                case 5: typ = "Ine";
+            }
+            echoOrder newOrder = new echoOrder(++i, order.getZdroj().getName(), order.getDestinacia().getName(), order.getVzdialenost(), typ, order.getZdroj(), order.getDestinacia());
             OrderListOBS.add(newOrder);
         }
         return OrderListOBS;

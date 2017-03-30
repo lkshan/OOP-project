@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/DBConnection.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/DBConnection.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main$echoOrder.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main$echoOrder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/orderlist/Order.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/orderlist/Order.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/orderlist/OrderList.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/orderlist/OrderList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/AddNewStorageController.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/AddNewStorageController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/orderlist/Orderlist.fxml" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/orderlist/Orderlist.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/DBConnection.java" afterPath="$PROJECT_DIR$/src/logistika/DBConnection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/Main.java" afterPath="$PROJECT_DIR$/src/logistika/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/orderlist/Order.java" afterPath="$PROJECT_DIR$/src/logistika/orderlist/Order.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/orderlist/OrderList.java" afterPath="$PROJECT_DIR$/src/logistika/orderlist/OrderList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/orderlist/Orderlist.fxml" afterPath="$PROJECT_DIR$/src/logistika/orderlist/Orderlist.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/view/AddNewStorageController.java" afterPath="$PROJECT_DIR$/src/logistika/view/AddNewStorageController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,11 +74,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logistika/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+            <state relative-caret-position="2085">
+              <caret line="213" column="49" lean-forward="false" selection-start-line="213" selection-start-column="49" selection-end-line="213" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="class#echoOrder#0;class#Main#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddNewStorageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logistika/view/AddNewStorageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,19 +102,12 @@
       <file leaf-file-name="OrderList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/OrderList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="1305">
+              <caret line="110" column="42" lean-forward="false" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#h2d#0;class#OrderList#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,11 +115,49 @@
       <file leaf-file-name="WorldMap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logistika/map/WorldMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="89" column="20" lean-forward="false" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+            <state relative-caret-position="1425">
+              <caret line="99" column="31" lean-forward="false" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBConnection.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/logistika/DBConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="56" column="46" lean-forward="false" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1490882121000" expanded="true" signature="692:774" ph="INSERT INTO `myOrders`... " />
+                <marker date="1490882121000" expanded="true" signature="692:776" ph="INSERT INTO `myOrders`... " />
+                <marker date="1490882121000" expanded="true" signature="692:810" ph="INSERT INTO `myOrders`... " />
+                <marker date="1490882121000" expanded="true" signature="692:815" ph="INSERT INTO `myOrders`... " />
+                <marker date="1490882121000" expanded="true" signature="692:864" ph="INSERT INTO `myOrders`... " />
+                <marker date="1490882121000" expanded="true" signature="692:896" ph="INSERT INTO `myOrders`... " />
+                <marker date="1490882121000" expanded="true" signature="692:919" ph="INSERT INTO `myOrders`... " />
+                <marker date="1490882121000" expanded="true" signature="1158:1228" ph="INSERT INTO `cities`... " />
+                <marker date="1490882121000" expanded="true" signature="1158:1253" ph="INSERT INTO `cities`... " />
+                <marker date="1490882121000" expanded="true" signature="1158:1260" ph="INSERT INTO `cities`... " />
+                <marker date="1490882121000" expanded="true" signature="1158:1278" ph="INSERT INTO `cities`... " />
+                <marker date="1490882121000" expanded="true" signature="1158:1282" ph="INSERT INTO " />
+                <marker date="1490882121000" expanded="true" signature="1362:1432" ph="SELECT 'id_c... " />
+                <marker date="1490882121000" expanded="true" signature="1836:1927" ph="INSERT INTO `storages`... " />
+                <marker date="1490882121000" expanded="true" signature="1836:1935" ph="INSERT INTO " />
+                <marker date="1490882121000" expanded="true" signature="1836:1966" ph="INSERT INTO `storages`... " />
+                <marker date="1490882121000" expanded="true" signature="1836:1970" ph="INSERT INTO " />
+                <marker date="1490882121000" expanded="true" signature="2050:2125" ph="SELECT `id_s... storages" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/Order.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,8 +165,8 @@
       <file leaf-file-name="MainItemsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logistika/view/MainItemsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,18 +212,18 @@
       <list>
         <option value="$PROJECT_DIR$/src/logistika/Main1.java" />
         <option value="$PROJECT_DIR$/src/logistika/view/MainViewController.java" />
-        <option value="$PROJECT_DIR$/src/logistika/DBConnection.java" />
-        <option value="$PROJECT_DIR$/src/logistika/view/AddNewStorageController.java" />
         <option value="$PROJECT_DIR$/src/logistika/map/cities.java" />
         <option value="$PROJECT_DIR$/src/logistika/map/map.java" />
         <option value="$PROJECT_DIR$/src/logistika/map/Cities.java" />
         <option value="$PROJECT_DIR$/src/logistika/map/Map.java" />
-        <option value="$PROJECT_DIR$/src/logistika/orderlist/Order.java" />
-        <option value="$PROJECT_DIR$/src/logistika/orderlist/OrderList.java" />
         <option value="$PROJECT_DIR$/src/logistika/orderlist/OrderListController.java" />
         <option value="$PROJECT_DIR$/src/logistika/view/MainItemsController.java" />
         <option value="$PROJECT_DIR$/src/logistika/map/WorldMap.java" />
+        <option value="$PROJECT_DIR$/src/logistika/orderlist/Order.java" />
+        <option value="$PROJECT_DIR$/src/logistika/view/AddNewStorageController.java" />
         <option value="$PROJECT_DIR$/src/logistika/Main.java" />
+        <option value="$PROJECT_DIR$/src/logistika/orderlist/OrderList.java" />
+        <option value="$PROJECT_DIR$/src/logistika/DBConnection.java" />
       </list>
     </option>
   </component>
@@ -282,6 +339,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OOP-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OOP-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logistika" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orderlist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -794,12 +873,13 @@
       <workItem from="1490118245026" duration="6000" />
       <workItem from="1490118395841" duration="1757000" />
       <workItem from="1490120199153" duration="1646000" />
-      <workItem from="1490168190952" duration="1675000" />
+      <workItem from="1490168190952" duration="19608000" />
+      <workItem from="1490882467171" duration="3000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50166000" />
+    <option name="totallyTimeSpent" value="68102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
@@ -808,14 +888,13 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20248447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20869565" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29440993" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -835,6 +914,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -847,9 +927,12 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -862,7 +945,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#h2d#0;class#OrderList#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -870,9 +956,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2025">
           <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -900,6 +984,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="class#echoOrder#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -908,7 +993,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#h2d#0;class#OrderList#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -916,9 +1004,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2055">
           <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -946,6 +1032,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="class#echoOrder#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -966,6 +1053,7 @@
           <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="class#echoOrder#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -974,7 +1062,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#h2d#0;class#OrderList#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -992,6 +1083,7 @@
           <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="class#echoOrder#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1037,6 +1129,7 @@
           <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="class#echoOrder#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1088,6 +1181,7 @@
           <caret line="20" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="class#echoOrder#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1133,13 +1227,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logistika/view/MainViewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1152,17 +1239,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="304" column="25" lean-forward="false" selection-start-line="304" selection-start-column="25" selection-end-line="304" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/view/AddNewStorageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1140">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1187,49 +1263,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/map/Cities.java">
+    <entry file="file://$PROJECT_DIR$/src/logistika/map/mesta.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1072">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1050">
+          <caret line="116" column="2" lean-forward="true" selection-start-line="116" selection-start-column="2" selection-end-line="116" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/OrderList.java">
+    <entry file="file://$PROJECT_DIR$/src/logistika/map/map.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/map/WorldMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="89" column="20" lean-forward="false" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/view/MainItemsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1241,28 +1285,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/map/mesta.txt">
+    <entry file="file://$PROJECT_DIR$/src/logistika/map/Cities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1050">
-          <caret line="116" column="2" lean-forward="true" selection-start-line="116" selection-start-column="2" selection-end-line="116" selection-end-column="2" />
+        <state relative-caret-position="-1020">
+          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/map/map.txt">
+    <entry file="file://$PROJECT_DIR$/src/logistika/map/WorldMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1425">
+          <caret line="99" column="31" lean-forward="false" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logistika/view/MainItemsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logistika/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+        <state relative-caret-position="2085">
+          <caret line="213" column="49" lean-forward="false" selection-start-line="213" selection-start-column="49" selection-end-line="213" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="class#echoOrder#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logistika/view/AddNewStorageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/OrderList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="110" column="42" lean-forward="false" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#h2d#0;class#OrderList#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logistika/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="56" column="46" lean-forward="false" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1490882121000" expanded="true" signature="692:774" ph="INSERT INTO `myOrders`... " />
+            <marker date="1490882121000" expanded="true" signature="692:776" ph="INSERT INTO `myOrders`... " />
+            <marker date="1490882121000" expanded="true" signature="692:810" ph="INSERT INTO `myOrders`... " />
+            <marker date="1490882121000" expanded="true" signature="692:815" ph="INSERT INTO `myOrders`... " />
+            <marker date="1490882121000" expanded="true" signature="692:864" ph="INSERT INTO `myOrders`... " />
+            <marker date="1490882121000" expanded="true" signature="692:896" ph="INSERT INTO `myOrders`... " />
+            <marker date="1490882121000" expanded="true" signature="692:919" ph="INSERT INTO `myOrders`... " />
+            <marker date="1490882121000" expanded="true" signature="1158:1228" ph="INSERT INTO `cities`... " />
+            <marker date="1490882121000" expanded="true" signature="1158:1253" ph="INSERT INTO `cities`... " />
+            <marker date="1490882121000" expanded="true" signature="1158:1260" ph="INSERT INTO `cities`... " />
+            <marker date="1490882121000" expanded="true" signature="1158:1278" ph="INSERT INTO `cities`... " />
+            <marker date="1490882121000" expanded="true" signature="1158:1282" ph="INSERT INTO " />
+            <marker date="1490882121000" expanded="true" signature="1362:1432" ph="SELECT 'id_c... " />
+            <marker date="1490882121000" expanded="true" signature="1836:1927" ph="INSERT INTO `storages`... " />
+            <marker date="1490882121000" expanded="true" signature="1836:1935" ph="INSERT INTO " />
+            <marker date="1490882121000" expanded="true" signature="1836:1966" ph="INSERT INTO `storages`... " />
+            <marker date="1490882121000" expanded="true" signature="1836:1970" ph="INSERT INTO " />
+            <marker date="1490882121000" expanded="true" signature="2050:2125" ph="SELECT `id_s... storages" />
           </folding>
         </state>
       </provider>

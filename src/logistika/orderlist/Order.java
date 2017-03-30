@@ -6,24 +6,24 @@ import logistika.map.Cities;
  * Created by lukashanincik on 21/03/2017.
  */
 public class Order {
-    private int hmotnost;
+    private int typ;
     private int vzdialenost;
     private Cities zdroj = new Cities();
     private Cities destinacia = new Cities();
 
-    public Order(int hmotnost, int vzdialenost, Cities zdroj, Cities destinacia) {
-        this.hmotnost = hmotnost;
+    public Order(int typ, int vzdialenost, Cities zdroj, Cities destinacia) {
+        this.typ = typ;
         this.vzdialenost = vzdialenost;
         this.zdroj = zdroj;
         this.destinacia = destinacia;
     }
 
-    public int getHmotnost() {
-        return hmotnost;
+    public int getTyp() {
+        return typ;
     }
 
-    public void setHmotnost(int hmotnost) {
-        this.hmotnost = hmotnost;
+    public void setTyp(int hmotnost) {
+        this.typ = hmotnost;
     }
 
     public int getVzdialenost() {
@@ -53,7 +53,7 @@ public class Order {
     public void printOrder(){
         System.out.println("Z  : " + this.getZdroj().getName());
         System.out.println("Do : " + this.getDestinacia().getName());
-        System.out.println("Hmotnost : " + this.getHmotnost());
+        System.out.println("Typ : " + this.getTyp());
         System.out.println("Vzdialenost : " + this.getVzdialenost());
     }
 }

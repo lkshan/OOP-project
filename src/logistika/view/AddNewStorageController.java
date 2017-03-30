@@ -122,7 +122,7 @@ public class AddNewStorageController {
     @FXML
     private void addDataToDB() throws SQLException {
         DBConnection connection = new DBConnection();
-        connection.insertData(nameField.getText(), addressField.getText(), cityField.getText());
+        //connection.insertData(nameField.getText(), addressField.getText(), cityField.getText());
         closeStage();
     }
 }
