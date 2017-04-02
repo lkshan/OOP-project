@@ -45,7 +45,7 @@ public class DBConnection {
         int id=-1;
         while(rs.next()){
             id = rs.getInt("id_city");
-            System.out.println(id);
+            //System.out.println(id);
         }
         return id;
     }
@@ -62,7 +62,7 @@ public class DBConnection {
         int id=-1;
         while (rs.next()){
             id = rs.getInt("id_storage");
-            System.out.println(id);
+            //System.out.println(id);
         }
         return id;
     }

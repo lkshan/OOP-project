@@ -1,30 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Inserting orders to DB, refresh orderList">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logistika/map/FullStorage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logistika/map/Storage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logistika/view/newStorageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/DBConnection.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/DBConnection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main$echoOrder.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main$echoOrder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/orderlist/Order.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/orderlist/Order.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/orderlist/OrderList.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/orderlist/OrderList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainItemsController.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainItemsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainViewController.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainViewController.class" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/map/mesta.txt" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/map/mesta.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainItems.fxml" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainItems.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainView.fxml" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainView.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/DBConnection.java" afterPath="$PROJECT_DIR$/src/logistika/DBConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/Main.java" afterPath="$PROJECT_DIR$/src/logistika/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/map/mesta.txt" afterPath="$PROJECT_DIR$/src/logistika/map/mesta.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/orderlist/Order.java" afterPath="$PROJECT_DIR$/src/logistika/orderlist/Order.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/map/Storage.java" afterPath="$PROJECT_DIR$/src/logistika/map/Storage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/orderlist/OrderList.java" afterPath="$PROJECT_DIR$/src/logistika/orderlist/OrderList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/view/MainItems.fxml" afterPath="$PROJECT_DIR$/src/logistika/view/MainItems.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/view/MainItemsController.java" afterPath="$PROJECT_DIR$/src/logistika/view/MainItemsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/view/MainView.fxml" afterPath="$PROJECT_DIR$/src/logistika/view/MainView.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/view/MainViewController.java" afterPath="$PROJECT_DIR$/src/logistika/view/MainViewController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,24 +64,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Storage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Storage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logistika/map/Storage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="364">
+              <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#540#541#0" expanded="true" />
-                <element signature="e#567#568#0" expanded="true" />
+                <element signature="e#607#608#0" expanded="true" />
                 <element signature="e#639#640#0" expanded="true" />
-                <element signature="e#667#668#0" expanded="true" />
-                <element signature="e#694#695#0" expanded="true" />
-                <element signature="e#731#732#0" expanded="true" />
-                <element signature="e#763#764#0" expanded="true" />
-                <element signature="e#798#799#0" expanded="true" />
-                <element signature="e#829#830#0" expanded="true" />
-                <element signature="e#877#878#0" expanded="true" />
-                <element signature="e#917#918#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderList.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/OrderList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="167" column="74" lean-forward="false" selection-start-line="167" selection-start-column="74" selection-end-line="167" selection-end-column="74" />
+              <folding>
+                <element signature="e#2858#2871#0" expanded="true" />
+                <element signature="method#h2d#0;class#OrderList#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -122,6 +107,8 @@
       <find>getOrders</find>
       <find>Main</find>
       <find>closeSt</find>
+      <find>sele</find>
+      <find>Syste</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -152,13 +139,13 @@
         <option value="$PROJECT_DIR$/src/logistika/map/FullStorage.java" />
         <option value="$PROJECT_DIR$/src/logistika/map/mesta.txt" />
         <option value="$PROJECT_DIR$/src/logistika/orderlist/Order.java" />
-        <option value="$PROJECT_DIR$/src/logistika/orderlist/OrderList.java" />
         <option value="$PROJECT_DIR$/src/logistika/view/MainViewController.java" />
         <option value="$PROJECT_DIR$/src/logistika/view/newStorageController.java" />
         <option value="$PROJECT_DIR$/src/logistika/Main.java" />
         <option value="$PROJECT_DIR$/src/logistika/view/MainItemsController.java" />
-        <option value="$PROJECT_DIR$/src/logistika/DBConnection.java" />
         <option value="$PROJECT_DIR$/src/logistika/map/Storage.java" />
+        <option value="$PROJECT_DIR$/src/logistika/DBConnection.java" />
+        <option value="$PROJECT_DIR$/src/logistika/orderlist/OrderList.java" />
       </list>
     </option>
   </component>
@@ -833,7 +820,7 @@
       <workItem from="1490168190952" duration="19608000" />
       <workItem from="1490882467171" duration="1501000" />
       <workItem from="1491129927022" duration="3015000" />
-      <workItem from="1491137262202" duration="15277000" />
+      <workItem from="1491137262202" duration="16202000" />
     </task>
     <task id="LOCAL-00001" summary="Inserting orders to DB, refresh orderList">
       <created>1490883281829</created>
@@ -842,11 +829,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490883281829</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implementation of storages">
+      <created>1491156484577</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1491156484577</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87892000" />
+    <option name="totallyTimeSpent" value="88817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
@@ -867,7 +861,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.175" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.175" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -896,7 +890,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Inserting orders to DB, refresh orderList" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inserting orders to DB, refresh orderList" />
+    <MESSAGE value="Implementation of storages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementation of storages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1198,14 +1193,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/OrderListController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logistika/map/mesta.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1214,31 +1201,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logistika/view/MainItems.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/view/newStorage.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1314,43 +1280,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="105" column="32" lean-forward="true" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1491155287000" expanded="true" signature="722:804" ph="INSERT INTO `myOrders`... " />
-            <marker date="1491155287000" expanded="true" signature="722:806" ph="INSERT INTO `myOrders`... " />
-            <marker date="1491155287000" expanded="true" signature="722:840" ph="INSERT INTO `myOrders`... " />
-            <marker date="1491155287000" expanded="true" signature="722:845" ph="INSERT INTO `myOrders`... " />
-            <marker date="1491155287000" expanded="true" signature="722:891" ph="INSERT INTO `myOrders`... " />
-            <marker date="1491155287000" expanded="true" signature="722:923" ph="INSERT INTO `myOrders`... " />
-            <marker date="1491155287000" expanded="true" signature="722:946" ph="INSERT INTO `myOrders`... " />
-            <marker date="1491155287000" expanded="true" signature="1185:1255" ph="INSERT INTO `cities`... " />
-            <marker date="1491155287000" expanded="true" signature="1185:1280" ph="INSERT INTO `cities`... " />
-            <marker date="1491155287000" expanded="true" signature="1185:1287" ph="INSERT INTO `cities`... " />
-            <marker date="1491155287000" expanded="true" signature="1185:1305" ph="INSERT INTO `cities`... " />
-            <marker date="1491155287000" expanded="true" signature="1185:1309" ph="INSERT INTO " />
-            <marker date="1491155287000" expanded="true" signature="1389:1459" ph="SELECT 'id_c... " />
-            <marker date="1491155287000" expanded="true" signature="1861:1928" ph="INSERT INTO `storages`... " />
-            <marker date="1491155287000" expanded="true" signature="1861:1952" ph="INSERT INTO `storages`... " />
-            <marker date="1491155287000" expanded="true" signature="1861:1959" ph="INSERT INTO `storages`... " />
-            <marker date="1491155287000" expanded="true" signature="1861:1988" ph="INSERT INTO " />
-            <marker date="1491155287000" expanded="true" signature="1861:2033" ph="INSERT INTO `storages`... " />
-            <marker date="1491155287000" expanded="true" signature="1861:2037" ph="INSERT INTO " />
-            <marker date="1491155287000" expanded="true" signature="2117:2192" ph="SELECT `id_s... storages" />
-            <marker date="1491155287000" expanded="true" signature="2596:2766" ph="INSERT INTO `storages`... " />
-            <marker date="1491155287000" expanded="true" signature="2981:3050" ph="SELECT `id_s... storages" />
-            <marker date="1491155287000" expanded="true" signature="3259:3310" ph="SELECT `name... cities" />
-            <marker date="1491155287000" expanded="true" signature="3259:3311" ph="SELECT `name... cities" />
-            <marker date="1491155287000" expanded="true" signature="3709:3731" ph="DELETE FROM " />
-            <marker date="1491155287000" expanded="true" signature="3784:3806" ph="DELETE FROM " />
-            <marker date="1491155287000" expanded="true" signature="3859:3879" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logistika/view/AddNewStorageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1359,34 +1288,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/OrderList.java">
+    <entry file="file://$PROJECT_DIR$/src/logistika/view/newStorage.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="52" column="53" lean-forward="false" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
+        <state relative-caret-position="-535">
+          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
           <folding>
-            <element signature="e#2858#2871#0" expanded="true" />
-            <element signature="method#h2d#0;class#OrderList#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/OrderListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logistika/map/Storage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="364">
+          <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
             <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#829#830#0" expanded="true" />
-            <element signature="e#877#878#0" expanded="true" />
-            <element signature="e#917#918#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logistika/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-243">
+          <caret line="64" column="26" lean-forward="false" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1491157259000" expanded="true" signature="722:804" ph="INSERT INTO `myOrders`... " />
+            <marker date="1491157259000" expanded="true" signature="722:806" ph="INSERT INTO `myOrders`... " />
+            <marker date="1491157259000" expanded="true" signature="722:840" ph="INSERT INTO `myOrders`... " />
+            <marker date="1491157259000" expanded="true" signature="722:845" ph="INSERT INTO `myOrders`... " />
+            <marker date="1491157259000" expanded="true" signature="722:891" ph="INSERT INTO `myOrders`... " />
+            <marker date="1491157259000" expanded="true" signature="722:923" ph="INSERT INTO `myOrders`... " />
+            <marker date="1491157259000" expanded="true" signature="722:946" ph="INSERT INTO `myOrders`... " />
+            <marker date="1491157259000" expanded="true" signature="1185:1255" ph="INSERT INTO `cities`... " />
+            <marker date="1491157259000" expanded="true" signature="1185:1280" ph="INSERT INTO `cities`... " />
+            <marker date="1491157259000" expanded="true" signature="1185:1287" ph="INSERT INTO `cities`... " />
+            <marker date="1491157259000" expanded="true" signature="1185:1305" ph="INSERT INTO `cities`... " />
+            <marker date="1491157259000" expanded="true" signature="1185:1309" ph="INSERT INTO " />
+            <marker date="1491157259000" expanded="true" signature="1389:1459" ph="SELECT 'id_c... " />
+            <marker date="1491157259000" expanded="true" signature="1863:1930" ph="INSERT INTO `storages`... " />
+            <marker date="1491157259000" expanded="true" signature="1863:1954" ph="INSERT INTO `storages`... " />
+            <marker date="1491157259000" expanded="true" signature="1863:1961" ph="INSERT INTO `storages`... " />
+            <marker date="1491157259000" expanded="true" signature="1863:1990" ph="INSERT INTO " />
+            <marker date="1491157259000" expanded="true" signature="1863:2035" ph="INSERT INTO `storages`... " />
+            <marker date="1491157259000" expanded="true" signature="1863:2039" ph="INSERT INTO " />
+            <marker date="1491157259000" expanded="true" signature="2119:2194" ph="SELECT `id_s... storages" />
+            <marker date="1491157259000" expanded="true" signature="2600:2770" ph="INSERT INTO `storages`... " />
+            <marker date="1491157259000" expanded="true" signature="2985:3054" ph="SELECT `id_s... storages" />
+            <marker date="1491157259000" expanded="true" signature="3263:3314" ph="SELECT `name... cities" />
+            <marker date="1491157259000" expanded="true" signature="3263:3315" ph="SELECT `name... cities" />
+            <marker date="1491157259000" expanded="true" signature="3713:3735" ph="DELETE FROM " />
+            <marker date="1491157259000" expanded="true" signature="3788:3810" ph="DELETE FROM " />
+            <marker date="1491157259000" expanded="true" signature="3863:3883" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/OrderList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="167" column="74" lean-forward="false" selection-start-line="167" selection-start-column="74" selection-end-line="167" selection-end-column="74" />
+          <folding>
+            <element signature="e#2858#2871#0" expanded="true" />
+            <element signature="method#h2d#0;class#OrderList#0" expanded="false" />
           </folding>
         </state>
       </provider>

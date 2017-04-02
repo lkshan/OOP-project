@@ -47,11 +47,11 @@ public class Storage {
         this.location = location;
     }
 
-    public int addOrder(Order order){
-        if (order.getTyp() != this.type){
-            if (storageList.add(order))return 1;
-            else return 0;
+    public boolean addOrder(Order order){
+        if (order.getTyp() == this.type){
+            if (storageList.add(order))return true;
+            else return false;
         }
-        else return 0;
+        else return false;
     }
 }

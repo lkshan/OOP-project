@@ -159,11 +159,15 @@ public class OrderList {
                 //System.out.println(id);
                 //Order selectedOrder = new Order(Objednavky.get(id-1).getTyp(), Objednavky.get(id-1).getVzdialenost(), Objednavky.get(id-1).getZdroj(), Objednavky.get(id-1).getDestinacia());
                 //Objednavky.get(id-1);
-                printOrders();
+                //printOrders();
                 Order selectedOrder = Objednavky.get(id - 1);
-                connection.insertNewOrder(selectedOrder);
-                Objednavky.remove(id - 1);
-                main.showOrderTableView();
+                if (selectedOrder.getZdroj().addOrder(selectedOrder)){
+                    connection.insertNewOrder(selectedOrder);
+                    Objednavky.remove(id - 1);
+                    main.showOrderTableView();
+                    System.out.println("Objednavka bola prevezena na sklad");
+                }
+                else System.out.println("Tato objednavka nepatri na tento sklad");
             }
             else System.out.println("Nevhodne cislo objednavky");
         }
