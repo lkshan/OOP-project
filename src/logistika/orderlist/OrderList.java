@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import logistika.DBConnection;
 import logistika.Main;
 import logistika.map.Cities;
+import logistika.map.FullStorage;
+import logistika.map.Storage;
 import logistika.map.WorldMap;
 
 import java.awt.*;
@@ -14,6 +16,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
@@ -36,10 +39,10 @@ public class OrderList {
         return Objednavky;
     }
 
-    public void createOrderList(Cities city) throws IOException{
+    public void createOrderList() throws IOException, SQLException {
         WorldMap map = new WorldMap();
         int i, rand;
-        Cities zdroj = new Cities();
+        Storage zdroj = new Storage();
         Cities destinacia = new Cities();
         int typ, vzdialenost;
         for (i = 0; i < 10; i++) {
@@ -47,19 +50,50 @@ public class OrderList {
             Cities mesto = new Cities();
             mesto = map.getCities().get(rand-1);
             destinacia = mesto;
-            zdroj = city;
+            rand = randInt(getStorageList().size(), 1);
+            zdroj = getStorageList().get(rand-1);
             typ = randInt(5, 1);
             //
             int a, b;
             double ab;
-            a = Math.abs( mesto.getX() - city.getX() +1 );
-            b = Math.abs( mesto.getY() - city.getY() +1 );
+            a = Math.abs( mesto.getX() - zdroj.getLocation().getX() +1 );
+            b = Math.abs( mesto.getY() - zdroj.getLocation().getY() +1 );
             ab = Math.pow(a, 2) + Math.pow(b, 2);
             vzdialenost = (int) Math.round( Math.sqrt(ab) );
             //
             Order order = new Order(typ, vzdialenost, zdroj, destinacia);
             Objednavky.add(order);
         }
+    }
+
+    public ArrayList<Storage> getStorageList() throws SQLException {
+        ArrayList<Storage> storageArrayList = new ArrayList<Storage>();
+        DBConnection connection = new DBConnection();
+        for (FullStorage fullStorage : getFullStorageList()){
+            Storage storage = new Storage();
+            storage.setType(fullStorage.getType());
+            storage.setName(fullStorage.getName());
+            Cities city = new Cities();
+            city = connection.getCity(fullStorage.getCity_id());
+            storage.setLocation(city);
+            storageArrayList.add(storage);
+        }
+        return storageArrayList;
+    }
+
+    public ArrayList<FullStorage> getFullStorageList() throws SQLException {
+        DBConnection connection = new DBConnection();
+        ResultSet rs = connection.getStorageList();
+        ArrayList<FullStorage> storageArrayList = new ArrayList<FullStorage>();
+        while (rs.next()){
+            FullStorage storage = new FullStorage();
+            storage.setId_storage(rs.getInt("id_storage"));
+            storage.setName(rs.getString("name"));
+            storage.setType(rs.getInt("specifying"));
+            storage.setCity_id(rs.getInt("position"));
+            storageArrayList.add(storage);
+        }
+        return storageArrayList;
     }
 
     public static int randCity() throws IOException{

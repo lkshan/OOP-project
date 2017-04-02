@@ -58,7 +58,7 @@ Y
 Dublin
 V
 8
-Barcelon
+Barcelona
 X
 10
 Roma

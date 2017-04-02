@@ -1,6 +1,7 @@
 package logistika.orderlist;
 
 import logistika.map.Cities;
+import logistika.map.Storage;
 
 /**
  * Created by lukashanincik on 21/03/2017.
@@ -8,10 +9,10 @@ import logistika.map.Cities;
 public class Order {
     private int typ;
     private int vzdialenost;
-    private Cities zdroj = new Cities();
+    private Storage zdroj = new Storage();
     private Cities destinacia = new Cities();
 
-    public Order(int typ, int vzdialenost, Cities zdroj, Cities destinacia) {
+    public Order(int typ, int vzdialenost, Storage zdroj, Cities destinacia) {
         this.typ = typ;
         this.vzdialenost = vzdialenost;
         this.zdroj = zdroj;
@@ -34,11 +35,11 @@ public class Order {
         this.vzdialenost = vzdialenost;
     }
 
-    public Cities getZdroj() {
+    public Storage getZdroj() {
         return zdroj;
     }
 
-    public void setZdroj(Cities zdroj) {
+    public void setZdroj(Storage zdroj) {
         this.zdroj = zdroj;
     }
 

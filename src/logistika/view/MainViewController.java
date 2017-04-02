@@ -1,6 +1,7 @@
 package logistika.view;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import logistika.Main;
 
 import java.io.IOException;
@@ -11,6 +12,14 @@ import java.io.IOException;
 public class MainViewController {
 
     private Main main;
+    @FXML
+    private Label cashLabel;
+
+    @FXML
+    private void initialize(){
+        String str = ""+Main.getCash()+"$";
+        cashLabel.setText(str);
+    }
 
     @FXML
     private void goHome() throws IOException {
@@ -19,6 +28,6 @@ public class MainViewController {
 
     @FXML
     private void addStorage() throws IOException {
-        main.showAddStorage();
+        main.showFirstStorage();
     }
 }

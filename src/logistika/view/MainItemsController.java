@@ -1,10 +1,14 @@
 package logistika.view;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+import logistika.DBConnection;
 import logistika.Main;
 import logistika.orderlist.OrderList;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 /**
  * Created by lukashanincik on 17/03/2017.
@@ -19,9 +23,21 @@ public class MainItemsController {
     }
 
     @FXML
-    private void goOrderlist() throws IOException {
+    private void goOrderlist() throws IOException, SQLException {
         main.showOrderlistScene();
         main.showOrderTableView();
     }
 
+    @FXML
+    private void exit() throws SQLException {
+        DBConnection connection = new DBConnection();
+        connection.eraseDB();
+        closeStage();
+    }
+    @FXML
+    private Button exitButton;
+    private void closeStage(){
+        Stage stage = (Stage) exitButton.getScene().getWindow();
+        stage.close();
+    }
 }

@@ -8,6 +8,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -15,10 +16,12 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import logistika.map.Cities;
+import logistika.map.Storage;
 import logistika.orderlist.Order;
 import logistika.orderlist.OrderList;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class Main extends Application {
     private static Stage primaryStage;
@@ -27,6 +30,16 @@ public class Main extends Application {
     private static TableView<echoOrder> OLTV;
 
     private static int firstStart = 0;
+    private static int cash = 10000;
+
+    public static int getCash() {
+        return cash;
+    }
+
+    public static void setCash(int cash) {
+        Main.cash = cash;
+    }
+
     @Override
     public void start(Stage primaryStage) throws IOException {
         this.primaryStage = primaryStage;
@@ -34,9 +47,10 @@ public class Main extends Application {
 
         showMainView();
         showMainItems();
+        showFirstStorage();
     }
 
-    private void showMainView() throws IOException {
+    public void showMainView() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/MainView.fxml"));
         mainLayout = loader.load();
@@ -80,7 +94,21 @@ public class Main extends Application {
         dialogStage.showAndWait();
     }
 
-    public static void showOrderTableView()throws IOException{
+    public static void showFirstStorage() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("view/newStorage.fxml"));
+        BorderPane firstStorage = loader.load();
+
+        Stage dialogStage = new Stage();
+        dialogStage.setTitle("First storage");
+        dialogStage.initModality(Modality.WINDOW_MODAL);
+        dialogStage.initOwner(primaryStage);
+        Scene scene = new Scene(firstStorage);
+        dialogStage.setScene(scene);
+        dialogStage.showAndWait();
+    }
+
+    public static void showOrderTableView() throws IOException, SQLException {
 
         TableColumn<echoOrder, Integer> idColumn = new TableColumn<>("ID");
         idColumn.setCellValueFactory(new PropertyValueFactory<echoOrder, Integer>("id"));
@@ -115,7 +143,7 @@ public class Main extends Application {
         private String to = new String();
         private int dist;
         private String type;
-        private Cities source;
+        private Storage source;
         private Cities destination;
 
         public int getId() {
@@ -126,11 +154,11 @@ public class Main extends Application {
             this.id = ID;
         }
 
-        public Cities getSource() {
+        public Storage getSource() {
             return source;
         }
 
-        public void setSource(Cities source) {
+        public void setSource(Storage source) {
             this.source = source;
         }
 
@@ -174,7 +202,7 @@ public class Main extends Application {
             this.type = type;
         }
 
-        public echoOrder(int id, String from, String to, int dist, String type, Cities source, Cities destination) {
+        public echoOrder(int id, String from, String to, int dist, String type, Storage source, Cities destination) {
             this.id = id;
             this.from = from;
             this.to = to;
@@ -185,7 +213,7 @@ public class Main extends Application {
         }
     }
 
-    public static ObservableList<echoOrder> getOrders() throws IOException {
+    public static ObservableList<echoOrder> getOrders() throws IOException, SQLException {
         OrderList orderList = new OrderList();
         Cities city = new Cities();
         city.setName("Svidnik");
@@ -193,7 +221,7 @@ public class Main extends Application {
         city.setY(8);
         //orderList.createOrderList(city);
         if (firstStart == 0) {
-            orderList.createOrderList(city);
+            orderList.createOrderList();
             firstStart = 1;
         }
             else {
@@ -205,11 +233,11 @@ public class Main extends Application {
         for (Order order : orderList.getObjednavky()){
             String typ = new String();
             switch (order.getTyp()){
-                case 1: typ = "Mraziarne"; break;
-                case 2: typ = "Palivo"; break;
-                case 3: typ = "Chemikalie"; break;
-                case 4: typ = "Palety"; break;
-                case 5: typ = "Ine";
+                case 1: typ = "Freezers"; break;
+                case 2: typ = "Fuel"; break;
+                case 3: typ = "Chemicals"; break;
+                case 4: typ = "Pallets"; break;
+                case 5: typ = "Other";
             }
             echoOrder newOrder = new echoOrder(++i, order.getZdroj().getName(), order.getDestinacia().getName(), order.getVzdialenost(), typ, order.getZdroj(), order.getDestinacia());
             OrderListOBS.add(newOrder);
