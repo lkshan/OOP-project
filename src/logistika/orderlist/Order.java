@@ -19,6 +19,10 @@ public class Order {
         this.destinacia = destinacia;
     }
 
+    public Order(){
+
+    }
+
     public int getTyp() {
         return typ;
     }

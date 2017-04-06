@@ -1,10 +1,14 @@
 package logistika;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import logistika.map.Cities;
 import logistika.map.Storage;
+import logistika.orderlist.DBOrder;
 import logistika.orderlist.Order;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * Created by lukashanincik on 18/03/2017.
@@ -83,6 +87,12 @@ public class DBConnection {
         return rs;
     }
 
+    public ResultSet getDistinctStorageList() throws SQLException {
+        String query = "SELECT DISTINCT `id_storage`, `name`, `specifying`, `position` FROM `storages`";
+        rs = st.executeQuery(query);
+        return rs;
+    }
+
     public Cities getCity(int id) throws SQLException {
         Cities city = new Cities();
         try{
@@ -106,5 +116,32 @@ public class DBConnection {
         st.executeUpdate(query);
         query = "DELETE FROM `cities`";
         st.executeUpdate(query);
+    }
+
+    public ObservableList<DBOrder> selectOrdersByStorage(int id_storage) throws SQLException {
+        try{
+            String querySelectCity = "SELECT myOrders.id_order, cities.name, storages.name, myOrders.distance, myOrders.specifying FROM myOrders INNER JOIN cities ON myOrders.id_city = cities.id_city INNER JOIN storages ON myOrders.id_storage = storages.id_storage WHERE myOrders.id_storage = "+id_storage;
+            rs = st.executeQuery(querySelectCity);
+        }catch (SQLException e){
+            System.out.println(e);
+        }
+        ArrayList<DBOrder> orderArrayList = new ArrayList<DBOrder>();
+        while (rs.next()){
+            DBOrder order = new DBOrder();
+            order.setId_order(rs.getInt("myOrders.id_order"));
+            order.setCityName(rs.getString("cities.name"));
+            order.setStorageName(rs.getString("storages.name"));
+            order.setVzdialenost(rs.getInt("myOrders.distance"));
+            switch (rs.getInt("specifying")){
+                case 1 : order.setTyp_str("Freezers"); break;
+                case 2 : order.setTyp_str("Fuel"); break;
+                case 3 : order.setTyp_str("Chemicals"); break;
+                case 4 : order.setTyp_str("Pallets"); break;
+                case 5 : order.setTyp_str("Other"); break;
+            }
+            orderArrayList.add(order);
+        }
+        ObservableList<DBOrder> orderObservableList = FXCollections.observableArrayList(orderArrayList);
+        return orderObservableList;
     }
 }
