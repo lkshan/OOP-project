@@ -92,7 +92,7 @@ public class StorageController {
         TableColumn<DBOrder, Integer> distance = new TableColumn<>("Distance");
         distance.setCellValueFactory(new PropertyValueFactory<DBOrder, Integer>("vzdialenost"));
         TableColumn<DBOrder, String> type = new TableColumn<>("Specifying");
-        type.setCellValueFactory(new PropertyValueFactory<DBOrder, String>("typ"));
+        type.setCellValueFactory(new PropertyValueFactory<DBOrder, String>("typ_str"));
         StorageTV = new TableView<>();
         StorageTV.setItems(orderObservableList);
         StorageTV.getColumns().addAll(source, destination, distance, type);
