@@ -50,7 +50,7 @@ public class StorageController {
         //ArrayList<Integer> storageIdArrayList = new ArrayList<Integer>();
         ObservableList<String> storageNameObservableList;
         ObservableList<String> storageIdObservableList;
-        rs = connection.getStorageList();
+        rs = connection.getStorageNameList();
         while (rs.next()){
             storageNameArrayList.add(rs.getString("name"));
             //storageIdArrayList.add(rs.getInt("id_storage"));
@@ -66,13 +66,13 @@ public class StorageController {
         return StorageLV;
     }
 
-    private ArrayList<Integer> getStorageList() throws SQLException {
+    private ArrayList<String> getStorageList() throws SQLException {
         DBConnection connection = new DBConnection();
         ResultSet rs;
-        ArrayList<Integer> storageArrayList = new ArrayList<Integer>();
-        rs = connection.getStorageList();
+        ArrayList<String> storageArrayList = new ArrayList<String>();
+        rs = connection.getStorageNameList();
         while (rs.next()){
-            storageArrayList.add(rs.getInt("id_storage"));
+            storageArrayList.add(rs.getString("name"));
             //storageNameArrayList.add(rs.getString("name"));
         }
         return storageArrayList;
@@ -80,9 +80,9 @@ public class StorageController {
 
     public void goToStorage() throws SQLException {
         int id_select = StorageLV.getSelectionModel().getSelectedIndex();
-        int id_storage = getStorageList().get(id_select);
+        String storageName = getStorageList().get(id_select);
         DBConnection connection = new DBConnection();
-        ObservableList<DBOrder> orderObservableList = connection.selectOrdersByStorage(id_storage);
+        ObservableList<DBOrder> orderObservableList = connection.selectOrdersByStorage(storageName);
         //TableColumn<FullStorage, String> nameColumn = new TableColumn<>("Storages");
         //nameColumn.setCellValueFactory(new PropertyValueFactory<FullStorage, String>("name"));
         TableColumn<DBOrder, String> source = new TableColumn<>("Deliver from");

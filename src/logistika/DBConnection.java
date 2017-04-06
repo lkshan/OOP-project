@@ -87,6 +87,12 @@ public class DBConnection {
         return rs;
     }
 
+    public ResultSet getStorageNameList() throws SQLException {
+        String query = "SELECT DISTINCT `name` FROM `storages`";
+        rs = st.executeQuery(query);
+        return rs;
+    }
+
     public ResultSet getDistinctStorageList() throws SQLException {
         String query = "SELECT DISTINCT `id_storage`, `name`, `specifying`, `position` FROM `storages`";
         rs = st.executeQuery(query);
@@ -118,14 +124,14 @@ public class DBConnection {
         st.executeUpdate(query);
     }
 
-    public ObservableList<DBOrder> selectOrdersByStorage(int id_storage) throws SQLException {
+    public ObservableList<DBOrder> selectOrdersByStorage(String storageName) throws SQLException {
         try{
-            String querySelectCity = "SELECT myOrders.id_order, cities.name, storages.name, myOrders.distance, myOrders.specifying FROM myOrders INNER JOIN cities ON myOrders.id_city = cities.id_city INNER JOIN storages ON myOrders.id_storage = storages.id_storage WHERE myOrders.id_storage = "+id_storage;
+            String querySelectCity = "SELECT myOrders.id_order, cities.name, storages.name, myOrders.distance, myOrders.specifying FROM myOrders INNER JOIN cities ON myOrders.id_city = cities.id_city INNER JOIN storages ON myOrders.id_storage = storages.id_storage WHERE storages.name = \""+storageName+"\"";
             rs = st.executeQuery(querySelectCity);
         }catch (SQLException e){
             System.out.println(e);
         }
-        ArrayList<DBOrder> orderArrayList = new ArrayList<DBOrder>();
+        ArrayList<DBOrder> orderArrayList = new ArrayList<>();
         while (rs.next()){
             DBOrder order = new DBOrder();
             order.setId_order(rs.getInt("myOrders.id_order"));
