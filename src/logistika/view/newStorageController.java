@@ -84,9 +84,11 @@ public class newStorageController {
             }
         }
         //System.out.println(location.getName());
-        Storage storage = new Storage(nameTextField.getText(), specId, location);
-        connection.insertNewStorage(storage);
-        if(Main.getCash() >= 10000)Main.setCash(Main.getCash()-10000);
+        if(Main.getCash() >= 10000) {
+            Storage storage = new Storage(nameTextField.getText(), specId, location);
+            connection.insertNewStorage(storage);
+            Main.setCash(Main.getCash()-10000);
+        }
         else System.out.println("Nedostatok financii");
         closeStage();
         Main main = new Main();
