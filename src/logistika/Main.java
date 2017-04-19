@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -19,15 +20,25 @@ import logistika.map.Cities;
 import logistika.map.Storage;
 import logistika.orderlist.Order;
 import logistika.orderlist.OrderList;
+import logistika.shop.ShopGood;
+import logistika.shop.StorageExtensions;
 
-import java.io.IOException;
+import java.io.*;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Random;
 
-public class Main extends Application {
+import static java.lang.Math.pow;
+
+public class Main extends Application{
     private static Stage primaryStage;
     private static BorderPane mainLayout;
 
     private static TableView<echoOrder> OLTV;
+    private static TableView<ShopGood> ShopTV;
+
+    private static ArrayList<ShopGood> shopGoodArrayList = new ArrayList<>();
 
     private static int firstStart = 0;
     private static int cash = 10000;
@@ -38,6 +49,10 @@ public class Main extends Application {
 
     public static void setCash(int cash) {
         Main.cash = cash;
+    }
+
+    public static ArrayList<ShopGood> getShopGoodArrayList() {
+        return shopGoodArrayList;
     }
 
     @Override
@@ -216,9 +231,9 @@ public class Main extends Application {
     public static ObservableList<echoOrder> getOrders() throws IOException, SQLException {
         OrderList orderList = new OrderList();
         Cities city = new Cities();
-        city.setName("Svidnik");
+        /*city.setName("Svidnik");
         city.setX(1);
-        city.setY(8);
+        city.setY(8);*/
         //orderList.createOrderList(city);
         if (firstStart == 0) {
             orderList.createOrderList();
@@ -243,6 +258,115 @@ public class Main extends Application {
             OrderListOBS.add(newOrder);
         }
         return OrderListOBS;
+    }
+
+    public static void showShopScene() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("shop/Shop.fxml"));
+        BorderPane shop = loader.load();
+        mainLayout.setCenter(shop);
+    }
+
+    public static void showShopTableList() throws IOException, SQLException {
+        TableColumn<ShopGood, Integer> idColumn = new TableColumn<>("ID");
+        idColumn.setCellValueFactory(new PropertyValueFactory<ShopGood, Integer>("id"));
+
+        TableColumn<ShopGood, String> nameColumn = new TableColumn<>("Name");
+        nameColumn.setCellValueFactory(new PropertyValueFactory<ShopGood, String>("name"));
+
+        TableColumn<ShopGood, String> typeColumn = new TableColumn<>("Type");
+        typeColumn.setCellValueFactory(new PropertyValueFactory<ShopGood, String>("type"));
+
+        TableColumn<ShopGood, Integer> costColumn = new TableColumn<>("Cost");
+        costColumn.setCellValueFactory(new PropertyValueFactory<ShopGood, Integer>("cost"));
+
+        ShopTV = new TableView<>();
+        ShopTV.setPrefWidth(500);
+        ShopTV.setMaxHeight(280);
+        ShopTV.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        ShopTV.setItems(fullShopContent());
+        ShopTV.getColumns().addAll(idColumn, nameColumn, typeColumn, costColumn);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("shop/Shop.fxml"));
+        BorderPane orderlist = loader.load();
+        orderlist.setCenter(ShopTV);
+        mainLayout.setCenter(orderlist);
+    }
+
+    public static ObservableList<ShopGood> getShopGoods() throws IOException {
+        ObservableList<ShopGood> observebleShopGoods;
+        ArrayList<ShopGood> arrayShopGoods = new ArrayList<ShopGood>();
+        File f = new File("/Users/lukashanincik/Documents/OOP-project/src/logistika/shop/shop.txt");
+        FileReader fr = new FileReader(f);
+        BufferedReader br = new BufferedReader(fr);
+        String line = new String();
+        int i = 0, j = 1;
+        String name = "", type = "";
+        int id = 0, cost = 0;
+        while ((line = br.readLine()) != null){
+            switch (i){
+                case 0: id = j;
+                        name = line;
+                        break;
+                case 1: type = line;
+                        break;
+                case 2: cost = intToStr(line);
+                        break;
+            }
+            i++;
+            if (i == 3){
+                ShopGood shopGood = new ShopGood(id, name, type, cost);
+                arrayShopGoods.add(shopGood);
+                i = 0;
+                j++;
+            }
+        }
+        br.close();
+        fr.close();
+        observebleShopGoods = FXCollections.observableArrayList(arrayShopGoods);
+        return observebleShopGoods;
+    }
+
+    private static ObservableList<ShopGood> fullShopContent() throws SQLException, IOException {
+        DBConnection connection = new DBConnection();
+        ResultSet rs = connection.getDistinctStorageList();
+        //ArrayList<ShopGood> shopGoodArrayList = new ArrayList<ShopGood>();
+        String[] spec = new String[]{"Freezers", "Fuel", "Chemicals", "Pallets", "Other"};
+        String specifying = new String();
+        int j = 0;
+        for (ShopGood shopGood : getShopGoods()){
+            shopGoodArrayList.add(shopGood);
+        }
+        while (rs.next()){
+            switch (rs.getInt("specifying")){
+                case 1: specifying = "Freezers"; break;
+                case 2: specifying = "Fuel"; break;
+                case 3: specifying = "Chemicals"; break;
+                case 4: specifying = "Pallets"; break;
+                case 5: specifying = "Other"; break;
+            }
+            //System.out.println(specifying);
+            for (int i = 0; i < 5; i++){
+                if (!(specifying.equals(spec[i]))){
+                    StorageExtensions storageExtensions = new StorageExtensions(getShopGoods().size() + ++j , rs.getString("name")+" - "+spec[i], "Storage Extension", 5000, rs.getString("name"), spec[i]);
+                    shopGoodArrayList.add(storageExtensions);
+                }
+            }
+        }
+        ObservableList<ShopGood> shopGoodObservableList;
+        return shopGoodObservableList = FXCollections.observableArrayList(shopGoodArrayList);
+    }
+
+    public static int intToStr(String str){
+        int id = 0;
+        for (int i = 0; i < str.length(); i++){
+            char c = str.charAt(i);
+            int tempt=0;
+            tempt = (int) c;
+            tempt -= 48;
+            id += tempt * pow(10, (str.length() - i)-1);
+        }
+        return id;
     }
 
     public static void main(String[] args) {

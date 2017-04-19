@@ -40,9 +40,7 @@ public class newStorageController {
     public void initialize() throws IOException {
         //specifyingChoiceBox.setValue("Choose one");
         specifyingChoiceBox.setItems(specifyingList);
-
         locationChoiceBox.setItems(createCityList().sorted());
-
         priceLabel.setText("10 000$");
     }
 

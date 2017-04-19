@@ -94,7 +94,7 @@ public class DBConnection {
     }
 
     public ResultSet getDistinctStorageList() throws SQLException {
-        String query = "SELECT DISTINCT `id_storage`, `name`, `specifying`, `position` FROM `storages`";
+        String query = "SELECT DISTINCT `name`, `specifying` FROM `storages`";
         rs = st.executeQuery(query);
         return rs;
     }
@@ -149,5 +149,15 @@ public class DBConnection {
         }
         ObservableList<DBOrder> orderObservableList = FXCollections.observableArrayList(orderArrayList);
         return orderObservableList;
+    }
+
+    public ResultSet getStorageSpecifyingByName(String name) throws SQLException {
+        String query = "SELECT DISTINCT `specifying` FROM `storages` WHERE `name` = \""+name+"\"";
+        return rs = st.executeQuery(query);
+    }
+
+    public ResultSet getStoragePosition(String name) throws SQLException {
+        String query = "SELECT DISTINCT `position` FROM `storages` WHERE `name` = \""+name+"\" LIMIT 1";
+        return rs = st.executeQuery(query);
     }
 }

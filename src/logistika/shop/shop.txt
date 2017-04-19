@@ -1,0 +1,37 @@
+Freezer Truck
+Vehicle
+10000
+Fuel Truck
+Vehicle
+10000
+Chemical Truck
+Vehicle
+10000
+Pallet Truck
+Vehicle
+10000
+Super Truck
+Vehicle
+20000
+Freezer Ship
+Vehicle
+10000
+Fuel Ship
+Vehicle
+10000
+Chemical Ship
+Vehicle
+10000
+Pallet Ship
+Vehicle
+10000
+Super Ship
+Vehicle
+20000
+Plane
+Vehicle
+20000
+Super Plane
+Vehicle
+30000
+

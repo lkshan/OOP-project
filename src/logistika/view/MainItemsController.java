@@ -40,4 +40,9 @@ public class MainItemsController {
         Stage stage = (Stage) exitButton.getScene().getWindow();
         stage.close();
     }
+    @FXML
+    private void goShop() throws IOException, SQLException {
+        main.showShopScene();
+        main.showShopTableList();
+    }
 }

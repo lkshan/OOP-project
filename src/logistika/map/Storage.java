@@ -1,7 +1,10 @@
 package logistika.map;
 
+import logistika.DBConnection;
 import logistika.orderlist.Order;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -47,11 +50,15 @@ public class Storage {
         this.location = location;
     }
 
-    public boolean addOrder(Order order){
-        if (order.getTyp() == this.type){
-            if (storageList.add(order))return true;
-            else return false;
+    public boolean addOrder(Order order) throws SQLException {
+        DBConnection connection = new DBConnection();
+        ResultSet rs;
+        rs = connection.getStorageSpecifyingByName(order.getZdroj().getName());
+        while (rs.next()){
+            if (order.getTyp() == rs.getInt("specifying")){
+                if (storageList.add(order))return true;
+            }
         }
-        else return false;
+        return false;
     }
 }
