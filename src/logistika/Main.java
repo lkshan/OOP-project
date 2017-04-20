@@ -29,6 +29,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Random;
 
+import static java.lang.Math.PI;
 import static java.lang.Math.pow;
 
 public class Main extends Application{
@@ -41,6 +42,7 @@ public class Main extends Application{
     private static ArrayList<ShopGood> shopGoodArrayList = new ArrayList<>();
 
     private static int firstStart = 0;
+    private static int firstShopOpen = 0;
     private static int cash = 10000;
 
     public static int getCash() {
@@ -284,13 +286,21 @@ public class Main extends Application{
         ShopTV.setPrefWidth(500);
         ShopTV.setMaxHeight(280);
         ShopTV.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-        ShopTV.setItems(fullShopContent());
+        overWriteId();
+        if (firstShopOpen == 0) ShopTV.setItems(fullShopContent());
+        else ShopTV.setItems(FXCollections.observableArrayList(shopGoodArrayList));
+        System.out.println(shopGoodArrayList.size());
         ShopTV.getColumns().addAll(idColumn, nameColumn, typeColumn, costColumn);
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("shop/Shop.fxml"));
         BorderPane orderlist = loader.load();
         orderlist.setCenter(ShopTV);
         mainLayout.setCenter(orderlist);
+    }
+
+    public static ObservableList<ShopGood> arrayListToObservable(ArrayList<ShopGood> list){
+        ObservableList<ShopGood> observableList = FXCollections.observableArrayList(list);
+        return observableList;
     }
 
     public static ObservableList<ShopGood> getShopGoods() throws IOException {
@@ -333,7 +343,7 @@ public class Main extends Application{
         //ArrayList<ShopGood> shopGoodArrayList = new ArrayList<ShopGood>();
         String[] spec = new String[]{"Freezers", "Fuel", "Chemicals", "Pallets", "Other"};
         String specifying = new String();
-        int j = 0;
+        int j = 1;
         for (ShopGood shopGood : getShopGoods()){
             shopGoodArrayList.add(shopGood);
         }
@@ -346,15 +356,54 @@ public class Main extends Application{
                 case 5: specifying = "Other"; break;
             }
             //System.out.println(specifying);
+            int index=0, pointer = 0, found = 0;
             for (int i = 0; i < 5; i++){
                 if (!(specifying.equals(spec[i]))){
-                    StorageExtensions storageExtensions = new StorageExtensions(getShopGoods().size() + ++j , rs.getString("name")+" - "+spec[i], "Storage Extension", 5000, rs.getString("name"), spec[i]);
-                    shopGoodArrayList.add(storageExtensions);
+                    StorageExtensions storageExtensions = new StorageExtensions(0, rs.getString("name")+" - "+spec[i], "Storage Extension", 5000, rs.getString("name"), spec[i]);
+                    for (ShopGood shopGood : shopGoodArrayList){
+                        if (shopGood.getName().equals(storageExtensions.getName())){
+                            index = 1;
+                            found = 1;
+                        }
+                        pointer++;
+                    }
+                    if (found == 1){
+                        shopGoodArrayList.remove(pointer-1);
+                    }
+                    found = 0;
+                    pointer = 0;
+                    if (index != 1) shopGoodArrayList.add(storageExtensions);
                 }
             }
         }
+        rs = connection.getDistinctStorageList();
+        int pointer2 = 0, found2 = 0, spec2 = 0;
+        while (rs.next()){
+            for (ShopGood shopGood : shopGoodArrayList){
+                if (shopGood.getName().contains("Freezers"))spec2 = 1;
+                if (shopGood.getName().contains("Fuel"))spec2 = 2;
+                if (shopGood.getName().contains("Chemicals"))spec2 = 3;
+                if (shopGood.getName().contains("Pallets"))spec2 = 4;
+                if (shopGood.getName().contains("Other"))spec2 = 5;
+                if (shopGood.getName().contains(rs.getString("name")) && spec2 == rs.getInt("specifying")){
+                    found2 = pointer2;
+                }
+                pointer2++;
+            }
+            if (found2 != 0) shopGoodArrayList.remove(found2 - 1);
+            pointer2 = 0;
+            found2 = 0;
+        }
         ObservableList<ShopGood> shopGoodObservableList;
         return shopGoodObservableList = FXCollections.observableArrayList(shopGoodArrayList);
+    }
+
+    public static void overWriteId(){
+        int i = 1;
+        for (ShopGood shopGood : shopGoodArrayList){
+                shopGood.setId(i);
+                i++;
+        }
     }
 
     public static int intToStr(String str){

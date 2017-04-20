@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import logistika.DBConnection;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import logistika.Main;
@@ -20,7 +21,7 @@ public class shopController{
     private TextField selectGoodTextField;
 
     @FXML
-    private void purchaseItem() throws SQLException {
+    private void purchaseItem() throws SQLException, IOException {
         if (selectGoodTextField.getText().equals("")){
             System.out.println("Zadaj cislo objednavky");
         }
@@ -49,12 +50,15 @@ public class shopController{
                     storage.setType(specifying);
                     storage.setLocation(city);
                     connection.insertNewStorage(storage);
+                    Main.getShopGoodArrayList().remove(id - 1);
+                    Main.showShopTableList();
                 }else {
 
                 }
             }
         }
     }
+
     public static int intToStr(String str){
         int id = 0;
         for (int i = 0; i < str.length(); i++){
