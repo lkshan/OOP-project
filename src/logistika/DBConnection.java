@@ -6,6 +6,7 @@ import logistika.map.Cities;
 import logistika.map.Storage;
 import logistika.orderlist.DBOrder;
 import logistika.orderlist.Order;
+import logistika.shop.ShopGood;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -158,6 +159,30 @@ public class DBConnection {
 
     public ResultSet getStoragePosition(String name) throws SQLException {
         String query = "SELECT DISTINCT `position` FROM `storages` WHERE `name` = \""+name+"\" LIMIT 1";
+        return rs = st.executeQuery(query);
+    }
+
+    public void insertNewVehicle(ShopGood vehicle) throws SQLException {
+        //String type = new String();
+        int type = 0;
+        String ability = new String();
+        if(vehicle.getName().contains("Freezer")) type = 1;
+        if(vehicle.getName().contains("Fuel")) type = 2;
+        if(vehicle.getName().contains("Chemical")) type = 3;
+        if(vehicle.getName().contains("Pallet")) type = 4;
+        if(vehicle.getName().contains("Super")) type = 5;
+        double speed = 1;
+        //if(vehicle.getName().contains("Truck")) speed = 1;
+        if(vehicle.getName().contains("Ship")) speed = 0.5;
+        if(vehicle.getName().contains("Plane")) speed = 2;
+        if (type == 5) speed++;
+
+        String query = "INSERT INTO `vehicles`(`name`, `type`, `speed`) VALUES (\""+vehicle.getName()+"\", \""+type+"\", \""+speed+"\")";
+        st.executeUpdate(query);
+    }
+
+    public ResultSet getVehicles() throws SQLException {
+        String query = "SELECT `name`, `type`, `speed` FROM `vehicles`";
         return rs = st.executeQuery(query);
     }
 }

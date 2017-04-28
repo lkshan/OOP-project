@@ -45,4 +45,9 @@ public class MainItemsController {
         main.showShopScene();
         main.showShopTableList();
     }
+    @FXML
+    private void goVehicles() throws IOException, SQLException {
+        main.showVehicleListScene();
+        main.showVehicleTableList();
+    }
 }

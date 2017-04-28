@@ -53,7 +53,11 @@ public class shopController{
                     Main.getShopGoodArrayList().remove(id - 1);
                     Main.showShopTableList();
                 }else {
-
+                    if (Main.getShopGoodArrayList().get(id-1).getType().equals("Vehicle")){
+                        connection.insertNewVehicle(Main.getShopGoodArrayList().get(id - 1));
+                        Main.getShopGoodArrayList().remove(id - 1);
+                        Main.showShopTableList();
+                    }
                 }
             }
         }

@@ -22,6 +22,7 @@ import logistika.orderlist.Order;
 import logistika.orderlist.OrderList;
 import logistika.shop.ShopGood;
 import logistika.shop.StorageExtensions;
+import logistika.vehicles.Vehicle;
 
 import java.io.*;
 import java.sql.ResultSet;
@@ -38,6 +39,7 @@ public class Main extends Application{
 
     private static TableView<echoOrder> OLTV;
     private static TableView<ShopGood> ShopTV;
+    private static TableView<Vehicle> VehiclesTV;
 
     private static ArrayList<ShopGood> shopGoodArrayList = new ArrayList<>();
 
@@ -286,9 +288,9 @@ public class Main extends Application{
         ShopTV.setPrefWidth(500);
         ShopTV.setMaxHeight(280);
         ShopTV.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-        overWriteId();
         if (firstShopOpen == 0) ShopTV.setItems(fullShopContent());
         else ShopTV.setItems(FXCollections.observableArrayList(shopGoodArrayList));
+        overWriteId();
         System.out.println(shopGoodArrayList.size());
         ShopTV.getColumns().addAll(idColumn, nameColumn, typeColumn, costColumn);
         FXMLLoader loader = new FXMLLoader();
@@ -303,7 +305,7 @@ public class Main extends Application{
         return observableList;
     }
 
-    public static ObservableList<ShopGood> getShopGoods() throws IOException {
+    public static ObservableList<ShopGood> getShopGoods() throws IOException, SQLException {
         ObservableList<ShopGood> observebleShopGoods;
         ArrayList<ShopGood> arrayShopGoods = new ArrayList<ShopGood>();
         File f = new File("/Users/lukashanincik/Documents/OOP-project/src/logistika/shop/shop.txt");
@@ -333,6 +335,21 @@ public class Main extends Application{
         }
         br.close();
         fr.close();
+        DBConnection connection = new DBConnection();
+        ResultSet rs = connection.getVehicles();
+        int pointer3 = 0, found3 = 0;
+        while (rs.next()){
+            for (ShopGood shopGood : arrayShopGoods){
+                if (rs.getString("name").equals(shopGood.getName())){
+                    found3 = pointer3;
+                }
+                pointer3++;
+            }
+            arrayShopGoods.remove(found3);
+            pointer3 = 0;
+            found3 = 0;
+        }
+
         observebleShopGoods = FXCollections.observableArrayList(arrayShopGoods);
         return observebleShopGoods;
     }
@@ -396,6 +413,56 @@ public class Main extends Application{
         }
         ObservableList<ShopGood> shopGoodObservableList;
         return shopGoodObservableList = FXCollections.observableArrayList(shopGoodArrayList);
+    }
+
+    public static void showVehicleListScene() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("vehicles/vehicles.fxml"));
+        BorderPane orderlist = loader.load();
+        mainLayout.setCenter(orderlist);
+    }
+
+    public static void showVehicleTableList() throws IOException, SQLException {
+        TableColumn<Vehicle, Integer> nameColumn = new TableColumn<>("Name");
+        nameColumn.setCellValueFactory(new PropertyValueFactory<Vehicle, Integer>("name"));
+
+        TableColumn<Vehicle, String> typeColumn = new TableColumn<>("Specifying");
+        typeColumn.setCellValueFactory(new PropertyValueFactory<Vehicle, String>("type"));
+
+        TableColumn<Vehicle, String> speedColumn = new TableColumn<>("Speed");
+        speedColumn.setCellValueFactory(new PropertyValueFactory<Vehicle, String>("speed"));
+
+        VehiclesTV = new TableView<>();
+        VehiclesTV.setPrefWidth(500);
+        VehiclesTV.setMaxHeight(280);
+        VehiclesTV.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        VehiclesTV.setItems(FXCollections.observableArrayList(getVehicleList()));
+        VehiclesTV.getColumns().addAll(nameColumn, typeColumn, speedColumn);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("vehicles/vehicles.fxml"));
+        BorderPane orderlist = loader.load();
+        orderlist.setCenter(VehiclesTV);
+        mainLayout.setCenter(orderlist);
+    }
+
+    public static ArrayList<Vehicle> getVehicleList() throws SQLException {
+        DBConnection connection = new DBConnection();
+        ArrayList<Vehicle> vehicleArrayList = new ArrayList<Vehicle>();
+        ResultSet rs;
+        rs = connection.getVehicles();
+        while (rs.next()){
+            String specifying = new String();
+            switch (rs.getInt("type")){
+                case 1: specifying = "Freezers"; break;
+                case 2: specifying = "Fuel"; break;
+                case 3: specifying = "Chemicals"; break;
+                case 4: specifying = "Pallets"; break;
+                case 5: specifying = "Super"; break;
+            }
+            Vehicle vehicle = new Vehicle(rs.getString("name"), specifying, rs.getDouble("speed"));
+            vehicleArrayList.add(vehicle);
+        }
+        return vehicleArrayList;
     }
 
     public static void overWriteId(){
