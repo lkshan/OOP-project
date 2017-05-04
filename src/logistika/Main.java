@@ -465,6 +465,13 @@ public class Main extends Application{
         return vehicleArrayList;
     }
 
+    public static void showCreateExpoScene() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("createExpo/createExpo.fxml"));
+        BorderPane createExpo = loader.load();
+        mainLayout.setCenter(createExpo);
+    }
+
     public static void overWriteId(){
         int i = 1;
         for (ShopGood shopGood : shopGoodArrayList){

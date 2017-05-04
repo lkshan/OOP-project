@@ -50,4 +50,8 @@ public class MainItemsController {
         main.showVehicleListScene();
         main.showVehicleTableList();
     }
+    @FXML
+    private void goCreateExpo() throws IOException {
+        main.showCreateExpoScene();
+    }
 }

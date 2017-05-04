@@ -9,6 +9,7 @@
    <top>
       <FlowPane hgap="20.0" vgap="20.0" BorderPane.alignment="CENTER">
          <children>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" text="Create Order" />
             <Button mnemonicParsing="false" onAction="#goShop" prefHeight="100.0" prefWidth="120.0" text="Shop" />
             <Button mnemonicParsing="false" onAction="#goOrderlist" prefHeight="100.0" prefWidth="120.0" text="Order List">
                <FlowPane.margin>
@@ -19,9 +20,10 @@
                <FlowPane.margin>
                   <Insets />
                </FlowPane.margin></Button>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="146.0" text="Create expedition" />
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="145.0" text="Running expeditions" />
-            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" text="Exit" />
+            <Button mnemonicParsing="false" onAction="#goVehicles" prefHeight="100.0" prefWidth="120.0" text="Vehicles" />
+            <Button mnemonicParsing="false" onAction="#goCreateExpo" prefHeight="100.0" prefWidth="120.0" text="Create Expo" />
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" text="Running Expo" />
+            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="100.0" prefWidth="120.0" text="Exit" />
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

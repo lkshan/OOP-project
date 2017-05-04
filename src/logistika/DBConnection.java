@@ -185,4 +185,15 @@ public class DBConnection {
         String query = "SELECT `name`, `type`, `speed` FROM `vehicles`";
         return rs = st.executeQuery(query);
     }
+
+    public ResultSet getOrders(String storage) throws SQLException {
+        //              SELECT cities.name, storages.name, myOrders.distance, myOrders.specifying FROM myOrders INNER JOIN cities ON myOrders.id_city = cities.id_city INNER JOIN storages ON myOrders.id_storage = storages.id_storage WHERE storages.name = "CAW"
+        String query = "SELECT cities.name, storages.name, myOrders.distance, myOrders.specifying FROM myOrders INNER JOIN cities ON myOrders.id_city = cities.id_city INNER JOIN storages ON myOrders.id_storage = storages.id_storage WHERE storages.name = \""+storage+"\"";
+        return rs = st.executeQuery(query);
+    }
+
+    public ResultSet getOrders(String storage, int spec) throws SQLException {
+        String query = "SELECT cities.name, storages.name, myOrders.distance, myOrders.specifying FROM myOrders INNER JOIN cities ON myOrders.id_city = cities.id_city INNER JOIN storages ON myOrders.id_storage = storages.id_storage WHERE storages.name = \""+storage+"\" AND myOrders.specifying = "+spec;
+        return rs = st.executeQuery(query);
+    }
 }
