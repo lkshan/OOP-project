@@ -188,12 +188,17 @@ public class DBConnection {
 
     public ResultSet getOrders(String storage) throws SQLException {
         //              SELECT cities.name, storages.name, myOrders.distance, myOrders.specifying FROM myOrders INNER JOIN cities ON myOrders.id_city = cities.id_city INNER JOIN storages ON myOrders.id_storage = storages.id_storage WHERE storages.name = "CAW"
-        String query = "SELECT cities.name, storages.name, myOrders.distance, myOrders.specifying FROM myOrders INNER JOIN cities ON myOrders.id_city = cities.id_city INNER JOIN storages ON myOrders.id_storage = storages.id_storage WHERE storages.name = \""+storage+"\"";
+        String query = "SELECT myOrders.id_order, cities.name, storages.name, myOrders.distance, myOrders.specifying FROM myOrders INNER JOIN cities ON myOrders.id_city = cities.id_city INNER JOIN storages ON myOrders.id_storage = storages.id_storage WHERE storages.name = \""+storage+"\"";
         return rs = st.executeQuery(query);
     }
 
     public ResultSet getOrders(String storage, int spec) throws SQLException {
-        String query = "SELECT cities.name, storages.name, myOrders.distance, myOrders.specifying FROM myOrders INNER JOIN cities ON myOrders.id_city = cities.id_city INNER JOIN storages ON myOrders.id_storage = storages.id_storage WHERE storages.name = \""+storage+"\" AND myOrders.specifying = "+spec;
+        String query = "SELECT myOrders.id_order, cities.name, storages.name, myOrders.distance, myOrders.specifying FROM myOrders INNER JOIN cities ON myOrders.id_city = cities.id_city INNER JOIN storages ON myOrders.id_storage = storages.id_storage WHERE storages.name = \""+storage+"\" AND myOrders.specifying = "+spec;
+        return rs = st.executeQuery(query);
+    }
+
+    public ResultSet getOrderById(int id) throws SQLException {
+        String query = "SELECT cities.name, storages.name, myOrders.distance FROM myOrders INNER JOIN cities ON myOrders.id_city = cities.id_city INNER JOIN storages ON myOrders.id_storage = storages.id_storage WHERE myOrders.id_order = "+id;
         return rs = st.executeQuery(query);
     }
 }

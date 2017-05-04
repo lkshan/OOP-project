@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logistika/createExpo/createExpoController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main$echoOrder.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main$echoOrder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainItemsController.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainItemsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/DBConnection.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/DBConnection.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainItems.fxml" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainItems.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/DBConnection.java" afterPath="$PROJECT_DIR$/src/logistika/DBConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/Main.java" afterPath="$PROJECT_DIR$/src/logistika/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/view/MainItems.fxml" afterPath="$PROJECT_DIR$/src/logistika/view/MainItems.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/view/MainItemsController.java" afterPath="$PROJECT_DIR$/src/logistika/view/MainItemsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/createExpo/createExpoController.java" afterPath="$PROJECT_DIR$/src/logistika/createExpo/createExpoController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,56 +68,57 @@
       <file leaf-file-name="DBConnection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logistika/DBConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="189" column="24" lean-forward="false" selection-start-line="189" selection-start-column="24" selection-end-line="189" selection-end-column="24" />
+            <state relative-caret-position="502">
+              <caret line="201" column="40" lean-forward="false" selection-start-line="201" selection-start-column="40" selection-end-line="201" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1493884120000" expanded="true" signature="901:983" ph="INSERT INTO `myOrders`... " />
-                <marker date="1493884120000" expanded="true" signature="901:985" ph="INSERT INTO `myOrders`... " />
-                <marker date="1493884120000" expanded="true" signature="901:1019" ph="INSERT INTO `myOrders`... " />
-                <marker date="1493884120000" expanded="true" signature="901:1024" ph="INSERT INTO `myOrders`... " />
-                <marker date="1493884120000" expanded="true" signature="901:1070" ph="INSERT INTO `myOrders`... " />
-                <marker date="1493884120000" expanded="true" signature="901:1102" ph="INSERT INTO `myOrders`... " />
-                <marker date="1493884120000" expanded="true" signature="901:1125" ph="INSERT INTO `myOrders`... " />
-                <marker date="1493884120000" expanded="true" signature="1364:1434" ph="INSERT INTO `cities`... " />
-                <marker date="1493884120000" expanded="true" signature="1364:1459" ph="INSERT INTO `cities`... " />
-                <marker date="1493884120000" expanded="true" signature="1364:1466" ph="INSERT INTO `cities`... " />
-                <marker date="1493884120000" expanded="true" signature="1364:1484" ph="INSERT INTO `cities`... " />
-                <marker date="1493884120000" expanded="true" signature="1364:1488" ph="INSERT INTO " />
-                <marker date="1493884120000" expanded="true" signature="1568:1638" ph="SELECT 'id_c... " />
-                <marker date="1493884120000" expanded="true" signature="2042:2109" ph="INSERT INTO `storages`... " />
-                <marker date="1493884120000" expanded="true" signature="2042:2133" ph="INSERT INTO `storages`... " />
-                <marker date="1493884120000" expanded="true" signature="2042:2140" ph="INSERT INTO `storages`... " />
-                <marker date="1493884120000" expanded="true" signature="2042:2169" ph="INSERT INTO " />
-                <marker date="1493884120000" expanded="true" signature="2042:2214" ph="INSERT INTO `storages`... " />
-                <marker date="1493884120000" expanded="true" signature="2042:2218" ph="INSERT INTO " />
-                <marker date="1493884120000" expanded="true" signature="2298:2373" ph="SELECT `id_s... storages" />
-                <marker date="1493884120000" expanded="true" signature="2779:2949" ph="INSERT INTO `storages`... " />
-                <marker date="1493884120000" expanded="true" signature="3164:3233" ph="SELECT `id_s... storages" />
-                <marker date="1493884120000" expanded="true" signature="3387:3425" ph="SELECT DISTI... storages" />
-                <marker date="1493884120000" expanded="true" signature="3583:3635" ph="SELECT DISTI... storages" />
-                <marker date="1493884120000" expanded="true" signature="3844:3895" ph="SELECT `name... cities" />
-                <marker date="1493884120000" expanded="true" signature="3844:3896" ph="SELECT `name... cities" />
-                <marker date="1493884120000" expanded="true" signature="4294:4316" ph="DELETE FROM " />
-                <marker date="1493884120000" expanded="true" signature="4369:4391" ph="DELETE FROM " />
-                <marker date="1493884120000" expanded="true" signature="4444:4464" ph="DELETE FROM " />
-                <marker date="1493884120000" expanded="true" signature="4657:4905" ph="SELECT myOrd... myOrders" />
-                <marker date="1493884120000" expanded="true" signature="4657:4906" ph="SELECT myOrd... myOrders" />
-                <marker date="1493884120000" expanded="true" signature="4657:4908" ph="SELECT myOrd... myOrders" />
-                <marker date="1493884120000" expanded="true" signature="4657:4921" ph="SELECT myOrd... myOrders" />
-                <marker date="1493884120000" expanded="true" signature="4657:4925" ph="SELECT myOrd... myOrders" />
-                <marker date="1493884120000" expanded="true" signature="6111:6183" ph="SELECT DISTI... storages" />
-                <marker date="1493884120000" expanded="true" signature="6336:6414" ph="SELECT DISTI... storages" />
-                <marker date="1493884120000" expanded="true" signature="7198:7309" ph="INSERT INTO `vehicles`... " />
-                <marker date="1493884120000" expanded="true" signature="7433:7479" ph="SELECT `name... vehicles" />
-                <marker date="1493884120000" expanded="true" signature="7886:8116" ph="SELECT citie... myOrders" />
-                <marker date="1493884120000" expanded="true" signature="7886:8118" ph="SELECT citie... myOrders" />
-                <marker date="1493884120000" expanded="true" signature="7886:8127" ph="SELECT citie... myOrders" />
-                <marker date="1493884120000" expanded="true" signature="7886:8131" ph="SELECT citie... myOrders" />
-                <marker date="1493884120000" expanded="true" signature="8288:8518" ph="SELECT citie... myOrders" />
-                <marker date="1493884120000" expanded="true" signature="8288:8537" ph="SELECT citie... myOrders" />
-                <marker date="1493884120000" expanded="true" signature="8288:8559" ph="SELECT citie... myOrders" />
-                <marker date="1493884120000" expanded="true" signature="8288:8560" ph="SELECT citie... myOrders" />
+                <marker date="1493932249000" expanded="true" signature="901:983" ph="INSERT INTO `myOrders`... " />
+                <marker date="1493932249000" expanded="true" signature="901:985" ph="INSERT INTO `myOrders`... " />
+                <marker date="1493932249000" expanded="true" signature="901:1019" ph="INSERT INTO `myOrders`... " />
+                <marker date="1493932249000" expanded="true" signature="901:1024" ph="INSERT INTO `myOrders`... " />
+                <marker date="1493932249000" expanded="true" signature="901:1070" ph="INSERT INTO `myOrders`... " />
+                <marker date="1493932249000" expanded="true" signature="901:1102" ph="INSERT INTO `myOrders`... " />
+                <marker date="1493932249000" expanded="true" signature="901:1125" ph="INSERT INTO `myOrders`... " />
+                <marker date="1493932249000" expanded="true" signature="1364:1434" ph="INSERT INTO `cities`... " />
+                <marker date="1493932249000" expanded="true" signature="1364:1459" ph="INSERT INTO `cities`... " />
+                <marker date="1493932249000" expanded="true" signature="1364:1466" ph="INSERT INTO `cities`... " />
+                <marker date="1493932249000" expanded="true" signature="1364:1484" ph="INSERT INTO `cities`... " />
+                <marker date="1493932249000" expanded="true" signature="1364:1488" ph="INSERT INTO " />
+                <marker date="1493932249000" expanded="true" signature="1568:1638" ph="SELECT 'id_c... " />
+                <marker date="1493932249000" expanded="true" signature="2042:2109" ph="INSERT INTO `storages`... " />
+                <marker date="1493932249000" expanded="true" signature="2042:2133" ph="INSERT INTO `storages`... " />
+                <marker date="1493932249000" expanded="true" signature="2042:2140" ph="INSERT INTO `storages`... " />
+                <marker date="1493932249000" expanded="true" signature="2042:2169" ph="INSERT INTO " />
+                <marker date="1493932249000" expanded="true" signature="2042:2214" ph="INSERT INTO `storages`... " />
+                <marker date="1493932249000" expanded="true" signature="2042:2218" ph="INSERT INTO " />
+                <marker date="1493932249000" expanded="true" signature="2298:2373" ph="SELECT `id_s... storages" />
+                <marker date="1493932249000" expanded="true" signature="2779:2949" ph="INSERT INTO `storages`... " />
+                <marker date="1493932249000" expanded="true" signature="3164:3233" ph="SELECT `id_s... storages" />
+                <marker date="1493932249000" expanded="true" signature="3387:3425" ph="SELECT DISTI... storages" />
+                <marker date="1493932249000" expanded="true" signature="3583:3635" ph="SELECT DISTI... storages" />
+                <marker date="1493932249000" expanded="true" signature="3844:3895" ph="SELECT `name... cities" />
+                <marker date="1493932249000" expanded="true" signature="3844:3896" ph="SELECT `name... cities" />
+                <marker date="1493932249000" expanded="true" signature="4294:4316" ph="DELETE FROM " />
+                <marker date="1493932249000" expanded="true" signature="4369:4391" ph="DELETE FROM " />
+                <marker date="1493932249000" expanded="true" signature="4444:4464" ph="DELETE FROM " />
+                <marker date="1493932249000" expanded="true" signature="4657:4905" ph="SELECT myOrd... myOrders" />
+                <marker date="1493932249000" expanded="true" signature="4657:4906" ph="SELECT myOrd... myOrders" />
+                <marker date="1493932249000" expanded="true" signature="4657:4908" ph="SELECT myOrd... myOrders" />
+                <marker date="1493932249000" expanded="true" signature="4657:4921" ph="SELECT myOrd... myOrders" />
+                <marker date="1493932249000" expanded="true" signature="4657:4925" ph="SELECT myOrd... myOrders" />
+                <marker date="1493932249000" expanded="true" signature="6111:6183" ph="SELECT DISTI... storages" />
+                <marker date="1493932249000" expanded="true" signature="6336:6414" ph="SELECT DISTI... storages" />
+                <marker date="1493932249000" expanded="true" signature="7198:7309" ph="INSERT INTO `vehicles`... " />
+                <marker date="1493932249000" expanded="true" signature="7433:7479" ph="SELECT `name... vehicles" />
+                <marker date="1493932249000" expanded="true" signature="7886:8135" ph="SELECT citie... myOrders" />
+                <marker date="1493932249000" expanded="true" signature="7886:8137" ph="SELECT citie... myOrders" />
+                <marker date="1493932249000" expanded="true" signature="7886:8146" ph="SELECT citie... myOrders" />
+                <marker date="1493932249000" expanded="true" signature="7886:8150" ph="SELECT myOrd... myOrders" />
+                <marker date="1493932249000" expanded="true" signature="8307:8556" ph="SELECT citie... myOrders" />
+                <marker date="1493932249000" expanded="true" signature="8307:8575" ph="SELECT citie... myOrders" />
+                <marker date="1493932249000" expanded="true" signature="8307:8597" ph="SELECT citie... myOrders" />
+                <marker date="1493932249000" expanded="true" signature="8307:8598" ph="SELECT myOrd... myOrders" />
+                <marker date="1493932249000" expanded="true" signature="8745:8958" ph="SELECT citie... myOrders" />
               </folding>
             </state>
           </provider>
@@ -130,8 +127,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logistika/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="889">
-              <caret line="108" column="24" lean-forward="false" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+            <state relative-caret-position="994">
+              <caret line="482" column="4" lean-forward="false" selection-start-line="482" selection-start-column="4" selection-end-line="492" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#echoOrder#0;class#Main#0" expanded="false" />
@@ -143,13 +140,27 @@
       <file leaf-file-name="createExpoController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/logistika/createExpo/createExpoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+            <state relative-caret-position="240">
+              <caret line="92" column="45" lean-forward="false" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1306#1314#0" expanded="true" />
-                <element signature="e#1739#1747#0" expanded="true" />
-                <element signature="e#2242#2250#0" expanded="true" />
+                <element signature="e#935#944#0" expanded="true" />
+                <element signature="e#3621#3629#0" expanded="true" />
+                <element signature="e#4054#4062#0" expanded="true" />
+                <element signature="e#4557#4565#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBOrder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/DBOrder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+              <folding>
+                <element signature="e#813#814#0" expanded="true" />
+                <element signature="e#851#852#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -181,8 +192,8 @@
       <file leaf-file-name="StorageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logistika/storage/StorageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="83" column="53" lean-forward="true" selection-start-line="83" selection-start-column="53" selection-end-line="83" selection-end-column="53" />
+            <state relative-caret-position="349">
+              <caret line="98" column="8" lean-forward="false" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -1054,7 +1065,7 @@
       <workItem from="1491591350234" duration="288000" />
       <workItem from="1492066833238" duration="1197000" />
       <workItem from="1492585585508" duration="41523000" />
-      <workItem from="1493719861952" duration="13297000" />
+      <workItem from="1493719861952" duration="18497000" />
     </task>
     <task id="LOCAL-00001" summary="Inserting orders to DB, refresh orderList">
       <created>1490883281829</created>
@@ -1126,11 +1137,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493403321652</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Create expedition formular,&#10;selection of orders">
+      <created>1493885213611</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1493885213611</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166658000" />
+    <option name="totallyTimeSpent" value="171858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
@@ -1189,7 +1207,8 @@
     <MESSAGE value="Including shop and storage extensions" />
     <MESSAGE value="Debigging shop &#10;removed duplicate items&#10;!! Doesnt show item ID !!" />
     <MESSAGE value="Created Vehicle List&#10;Updated Shom - doesnt show owned vehicles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Vehicle List&#10;Updated Shom - doesnt show owned vehicles" />
+    <MESSAGE value="Create expedition formular,&#10;selection of orders" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create expedition formular,&#10;selection of orders" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1336,29 +1355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/DBOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="e#263#264#0" expanded="false" />
-            <element signature="e#294#295#0" expanded="false" />
-            <element signature="e#339#340#0" expanded="false" />
-            <element signature="e#379#380#0" expanded="false" />
-            <element signature="e#417#418#0" expanded="false" />
-            <element signature="e#451#452#0" expanded="false" />
-            <element signature="e#504#505#0" expanded="false" />
-            <element signature="e#549#550#0" expanded="false" />
-            <element signature="e#584#585#0" expanded="false" />
-            <element signature="e#615#616#0" expanded="false" />
-            <element signature="e#663#664#0" expanded="false" />
-            <element signature="e#703#704#0" expanded="false" />
-            <element signature="e#737#738#0" expanded="false" />
-            <element signature="e#767#768#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logistika/shop/Shop.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1390,14 +1386,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1693">
           <caret line="165" column="38" lean-forward="true" selection-start-line="165" selection-start-column="38" selection-end-line="165" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1496,14 +1484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/storage/StorageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="83" column="53" lean-forward="true" selection-start-line="83" selection-start-column="53" selection-end-line="83" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logistika/view/MainViewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1552,25 +1532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="889">
-          <caret line="108" column="24" lean-forward="false" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#echoOrder#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/view/AddNewStorageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="91" column="25" lean-forward="true" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logistika/view/AddNewStorage.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1582,71 +1543,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logistika/view/AddNewStorageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="91" column="25" lean-forward="true" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logistika/orderlist/DBOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="e#813#814#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/logistika/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="189" column="24" lean-forward="false" selection-start-line="189" selection-start-column="24" selection-end-line="189" selection-end-column="24" />
+        <state relative-caret-position="502">
+          <caret line="201" column="40" lean-forward="false" selection-start-line="201" selection-start-column="40" selection-end-line="201" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1493884120000" expanded="true" signature="901:983" ph="INSERT INTO `myOrders`... " />
-            <marker date="1493884120000" expanded="true" signature="901:985" ph="INSERT INTO `myOrders`... " />
-            <marker date="1493884120000" expanded="true" signature="901:1019" ph="INSERT INTO `myOrders`... " />
-            <marker date="1493884120000" expanded="true" signature="901:1024" ph="INSERT INTO `myOrders`... " />
-            <marker date="1493884120000" expanded="true" signature="901:1070" ph="INSERT INTO `myOrders`... " />
-            <marker date="1493884120000" expanded="true" signature="901:1102" ph="INSERT INTO `myOrders`... " />
-            <marker date="1493884120000" expanded="true" signature="901:1125" ph="INSERT INTO `myOrders`... " />
-            <marker date="1493884120000" expanded="true" signature="1364:1434" ph="INSERT INTO `cities`... " />
-            <marker date="1493884120000" expanded="true" signature="1364:1459" ph="INSERT INTO `cities`... " />
-            <marker date="1493884120000" expanded="true" signature="1364:1466" ph="INSERT INTO `cities`... " />
-            <marker date="1493884120000" expanded="true" signature="1364:1484" ph="INSERT INTO `cities`... " />
-            <marker date="1493884120000" expanded="true" signature="1364:1488" ph="INSERT INTO " />
-            <marker date="1493884120000" expanded="true" signature="1568:1638" ph="SELECT 'id_c... " />
-            <marker date="1493884120000" expanded="true" signature="2042:2109" ph="INSERT INTO `storages`... " />
-            <marker date="1493884120000" expanded="true" signature="2042:2133" ph="INSERT INTO `storages`... " />
-            <marker date="1493884120000" expanded="true" signature="2042:2140" ph="INSERT INTO `storages`... " />
-            <marker date="1493884120000" expanded="true" signature="2042:2169" ph="INSERT INTO " />
-            <marker date="1493884120000" expanded="true" signature="2042:2214" ph="INSERT INTO `storages`... " />
-            <marker date="1493884120000" expanded="true" signature="2042:2218" ph="INSERT INTO " />
-            <marker date="1493884120000" expanded="true" signature="2298:2373" ph="SELECT `id_s... storages" />
-            <marker date="1493884120000" expanded="true" signature="2779:2949" ph="INSERT INTO `storages`... " />
-            <marker date="1493884120000" expanded="true" signature="3164:3233" ph="SELECT `id_s... storages" />
-            <marker date="1493884120000" expanded="true" signature="3387:3425" ph="SELECT DISTI... storages" />
-            <marker date="1493884120000" expanded="true" signature="3583:3635" ph="SELECT DISTI... storages" />
-            <marker date="1493884120000" expanded="true" signature="3844:3895" ph="SELECT `name... cities" />
-            <marker date="1493884120000" expanded="true" signature="3844:3896" ph="SELECT `name... cities" />
-            <marker date="1493884120000" expanded="true" signature="4294:4316" ph="DELETE FROM " />
-            <marker date="1493884120000" expanded="true" signature="4369:4391" ph="DELETE FROM " />
-            <marker date="1493884120000" expanded="true" signature="4444:4464" ph="DELETE FROM " />
-            <marker date="1493884120000" expanded="true" signature="4657:4905" ph="SELECT myOrd... myOrders" />
-            <marker date="1493884120000" expanded="true" signature="4657:4906" ph="SELECT myOrd... myOrders" />
-            <marker date="1493884120000" expanded="true" signature="4657:4908" ph="SELECT myOrd... myOrders" />
-            <marker date="1493884120000" expanded="true" signature="4657:4921" ph="SELECT myOrd... myOrders" />
-            <marker date="1493884120000" expanded="true" signature="4657:4925" ph="SELECT myOrd... myOrders" />
-            <marker date="1493884120000" expanded="true" signature="6111:6183" ph="SELECT DISTI... storages" />
-            <marker date="1493884120000" expanded="true" signature="6336:6414" ph="SELECT DISTI... storages" />
-            <marker date="1493884120000" expanded="true" signature="7198:7309" ph="INSERT INTO `vehicles`... " />
-            <marker date="1493884120000" expanded="true" signature="7433:7479" ph="SELECT `name... vehicles" />
-            <marker date="1493884120000" expanded="true" signature="7886:8116" ph="SELECT citie... myOrders" />
-            <marker date="1493884120000" expanded="true" signature="7886:8118" ph="SELECT citie... myOrders" />
-            <marker date="1493884120000" expanded="true" signature="7886:8127" ph="SELECT citie... myOrders" />
-            <marker date="1493884120000" expanded="true" signature="7886:8131" ph="SELECT citie... myOrders" />
-            <marker date="1493884120000" expanded="true" signature="8288:8518" ph="SELECT citie... myOrders" />
-            <marker date="1493884120000" expanded="true" signature="8288:8537" ph="SELECT citie... myOrders" />
-            <marker date="1493884120000" expanded="true" signature="8288:8559" ph="SELECT citie... myOrders" />
-            <marker date="1493884120000" expanded="true" signature="8288:8560" ph="SELECT citie... myOrders" />
+            <marker date="1493932249000" expanded="true" signature="901:983" ph="INSERT INTO `myOrders`... " />
+            <marker date="1493932249000" expanded="true" signature="901:985" ph="INSERT INTO `myOrders`... " />
+            <marker date="1493932249000" expanded="true" signature="901:1019" ph="INSERT INTO `myOrders`... " />
+            <marker date="1493932249000" expanded="true" signature="901:1024" ph="INSERT INTO `myOrders`... " />
+            <marker date="1493932249000" expanded="true" signature="901:1070" ph="INSERT INTO `myOrders`... " />
+            <marker date="1493932249000" expanded="true" signature="901:1102" ph="INSERT INTO `myOrders`... " />
+            <marker date="1493932249000" expanded="true" signature="901:1125" ph="INSERT INTO `myOrders`... " />
+            <marker date="1493932249000" expanded="true" signature="1364:1434" ph="INSERT INTO `cities`... " />
+            <marker date="1493932249000" expanded="true" signature="1364:1459" ph="INSERT INTO `cities`... " />
+            <marker date="1493932249000" expanded="true" signature="1364:1466" ph="INSERT INTO `cities`... " />
+            <marker date="1493932249000" expanded="true" signature="1364:1484" ph="INSERT INTO `cities`... " />
+            <marker date="1493932249000" expanded="true" signature="1364:1488" ph="INSERT INTO " />
+            <marker date="1493932249000" expanded="true" signature="1568:1638" ph="SELECT 'id_c... " />
+            <marker date="1493932249000" expanded="true" signature="2042:2109" ph="INSERT INTO `storages`... " />
+            <marker date="1493932249000" expanded="true" signature="2042:2133" ph="INSERT INTO `storages`... " />
+            <marker date="1493932249000" expanded="true" signature="2042:2140" ph="INSERT INTO `storages`... " />
+            <marker date="1493932249000" expanded="true" signature="2042:2169" ph="INSERT INTO " />
+            <marker date="1493932249000" expanded="true" signature="2042:2214" ph="INSERT INTO `storages`... " />
+            <marker date="1493932249000" expanded="true" signature="2042:2218" ph="INSERT INTO " />
+            <marker date="1493932249000" expanded="true" signature="2298:2373" ph="SELECT `id_s... storages" />
+            <marker date="1493932249000" expanded="true" signature="2779:2949" ph="INSERT INTO `storages`... " />
+            <marker date="1493932249000" expanded="true" signature="3164:3233" ph="SELECT `id_s... storages" />
+            <marker date="1493932249000" expanded="true" signature="3387:3425" ph="SELECT DISTI... storages" />
+            <marker date="1493932249000" expanded="true" signature="3583:3635" ph="SELECT DISTI... storages" />
+            <marker date="1493932249000" expanded="true" signature="3844:3895" ph="SELECT `name... cities" />
+            <marker date="1493932249000" expanded="true" signature="3844:3896" ph="SELECT `name... cities" />
+            <marker date="1493932249000" expanded="true" signature="4294:4316" ph="DELETE FROM " />
+            <marker date="1493932249000" expanded="true" signature="4369:4391" ph="DELETE FROM " />
+            <marker date="1493932249000" expanded="true" signature="4444:4464" ph="DELETE FROM " />
+            <marker date="1493932249000" expanded="true" signature="4657:4905" ph="SELECT myOrd... myOrders" />
+            <marker date="1493932249000" expanded="true" signature="4657:4906" ph="SELECT myOrd... myOrders" />
+            <marker date="1493932249000" expanded="true" signature="4657:4908" ph="SELECT myOrd... myOrders" />
+            <marker date="1493932249000" expanded="true" signature="4657:4921" ph="SELECT myOrd... myOrders" />
+            <marker date="1493932249000" expanded="true" signature="4657:4925" ph="SELECT myOrd... myOrders" />
+            <marker date="1493932249000" expanded="true" signature="6111:6183" ph="SELECT DISTI... storages" />
+            <marker date="1493932249000" expanded="true" signature="6336:6414" ph="SELECT DISTI... storages" />
+            <marker date="1493932249000" expanded="true" signature="7198:7309" ph="INSERT INTO `vehicles`... " />
+            <marker date="1493932249000" expanded="true" signature="7433:7479" ph="SELECT `name... vehicles" />
+            <marker date="1493932249000" expanded="true" signature="7886:8135" ph="SELECT citie... myOrders" />
+            <marker date="1493932249000" expanded="true" signature="7886:8137" ph="SELECT citie... myOrders" />
+            <marker date="1493932249000" expanded="true" signature="7886:8146" ph="SELECT citie... myOrders" />
+            <marker date="1493932249000" expanded="true" signature="7886:8150" ph="SELECT myOrd... myOrders" />
+            <marker date="1493932249000" expanded="true" signature="8307:8556" ph="SELECT citie... myOrders" />
+            <marker date="1493932249000" expanded="true" signature="8307:8575" ph="SELECT citie... myOrders" />
+            <marker date="1493932249000" expanded="true" signature="8307:8597" ph="SELECT citie... myOrders" />
+            <marker date="1493932249000" expanded="true" signature="8307:8598" ph="SELECT myOrd... myOrders" />
+            <marker date="1493932249000" expanded="true" signature="8745:8958" ph="SELECT citie... myOrders" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logistika/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="994">
+          <caret line="482" column="4" lean-forward="false" selection-start-line="482" selection-start-column="4" selection-end-line="492" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#echoOrder#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logistika/storage/StorageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="98" column="8" lean-forward="false" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logistika/createExpo/createExpoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+        <state relative-caret-position="240">
+          <caret line="92" column="45" lean-forward="false" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1306#1314#0" expanded="true" />
-            <element signature="e#1739#1747#0" expanded="true" />
-            <element signature="e#2242#2250#0" expanded="true" />
+            <element signature="e#935#944#0" expanded="true" />
+            <element signature="e#3621#3629#0" expanded="true" />
+            <element signature="e#4054#4062#0" expanded="true" />
+            <element signature="e#4557#4565#0" expanded="true" />
           </folding>
         </state>
       </provider>
