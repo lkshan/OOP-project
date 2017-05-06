@@ -56,8 +56,8 @@ public class OrderList {
             //
             int a, b;
             double ab;
-            a = Math.abs( mesto.getX() - zdroj.getLocation().getX() +1 );
-            b = Math.abs( mesto.getY() - zdroj.getLocation().getY() +1 );
+            a = Math.abs( mesto.getX() - zdroj.getLocation().getX() ) +1 ;
+            b = Math.abs( mesto.getY() - zdroj.getLocation().getY() ) +1 ;
             ab = Math.pow(a, 2) + Math.pow(b, 2);
             vzdialenost = (int) Math.round( Math.sqrt(ab) );
             //

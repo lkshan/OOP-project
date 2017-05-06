@@ -201,4 +201,40 @@ public class DBConnection {
         String query = "SELECT cities.name, storages.name, myOrders.distance FROM myOrders INNER JOIN cities ON myOrders.id_city = cities.id_city INNER JOIN storages ON myOrders.id_storage = storages.id_storage WHERE myOrders.id_order = "+id;
         return rs = st.executeQuery(query);
     }
+    public ResultSet getStorageByName(String storageName) throws SQLException {
+        String query = "SELECT cities.name, cities.x, cities.y FROM cities INNER JOIN storages ON cities.id_city = storages.position WHERE storages.name = \""+storageName+"\" LIMIT 1";
+        return rs = st.executeQuery(query);
+    }
+    public ResultSet getCityByName(String cityName) throws SQLException {
+        String query = "SELECT `x`, `y` FROM `cities` WHERE `name` = \""+cityName+"\" LIMIT 1";
+        return rs = st.executeQuery(query);
+    }
+    public ResultSet getVehicleSpeedByName(String vehicleName) throws SQLException {
+        String query = "SELECT `speed` FROM `vehicles` WHERE `name` = \""+vehicleName+"\" LIMIT 1";
+        return rs = st.executeQuery(query);
+    }
+
+    public ResultSet createExpedition(int dist, double time, double costs, double profit) throws SQLException {
+        String query = "INSERT INTO `expeditions`(`totalDistance`, `totalTime`, `costs`, `profit`) VALUES ("+dist+", "+time+", "+costs+", "+profit+")";
+        st.executeUpdate(query);
+        query = "SELECT LAST_INSERT_ID()";
+        return rs = st.executeQuery(query);
+    }
+
+    public ResultSet replaceOrder(int id) throws SQLException {
+        String query = "INSERT INTO runningOrders (id_storage, id_city, distance, specifying) SELECT id_storage, id_city, distance, specifying FROM `myOrders` WHERE `id_order` = "+id;
+        st.executeUpdate(query);
+        query = "SELECT LAST_INSERT_ID()";
+        return rs = st.executeQuery(query);
+    }
+
+    public void setExpeditionId(int id_exp, int id_order) throws SQLException {
+        String query = "UPDATE `runningOrders` SET `id_expedition`= "+id_exp+" WHERE id_order = "+id_order;
+        st.executeUpdate(query);
+    }
+
+    public void removeOrderById(int id) throws SQLException {
+        String query = "DELETE FROM `myOrders` WHERE id_order = " +id;
+        st.executeUpdate(query);
+    }
 }
