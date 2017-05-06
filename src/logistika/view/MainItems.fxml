@@ -22,7 +22,8 @@
                </FlowPane.margin></Button>
             <Button mnemonicParsing="false" onAction="#goVehicles" prefHeight="100.0" prefWidth="120.0" text="Vehicles" />
             <Button mnemonicParsing="false" onAction="#goCreateExpo" prefHeight="100.0" prefWidth="120.0" text="Create Expo" />
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" text="Running Expo" />
+            <Button mnemonicParsing="false" onAction="#goRunningExpo" prefHeight="100.0" prefWidth="120.0" text="Running Expo" />
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" text="Done orders" />
             <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="100.0" prefWidth="120.0" text="Exit" />
          </children>
          <padding>

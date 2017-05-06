@@ -54,4 +54,8 @@ public class MainItemsController {
     private void goCreateExpo() throws IOException {
         main.showCreateExpoScene();
     }
+    @FXML
+    private void goRunningExpo() throws IOException{
+        main.showRunningExpoScene();
+    }
 }

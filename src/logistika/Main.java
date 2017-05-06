@@ -59,6 +59,10 @@ public class Main extends Application{
         return shopGoodArrayList;
     }
 
+    public static Stage getPrimaryStage() {
+        return primaryStage;
+    }
+
     @Override
     public void start(Stage primaryStage) throws IOException {
         this.primaryStage = primaryStage;
@@ -470,6 +474,13 @@ public class Main extends Application{
         loader.setLocation(Main.class.getResource("createExpo/createExpo.fxml"));
         BorderPane createExpo = loader.load();
         mainLayout.setCenter(createExpo);
+    }
+
+    public static void showRunningExpoScene() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("runningExpo/runningExpo.fxml"));
+        BorderPane runningExpo = loader.load();
+        mainLayout.setCenter(runningExpo);
     }
 
     public static void overWriteId(){

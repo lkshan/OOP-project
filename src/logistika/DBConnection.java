@@ -237,4 +237,14 @@ public class DBConnection {
         String query = "DELETE FROM `myOrders` WHERE id_order = " +id;
         st.executeUpdate(query);
     }
+
+    public ResultSet getAllExpeditions() throws SQLException {
+        String query = "SELECT `id_expedition`, `totalDistance`, `beginDate`, `totalTime`, `costs`, `profit` FROM `expeditions`";
+        return rs = st.executeQuery(query);
+    }
+
+    public ResultSet getNow() throws SQLException {
+        String query = "SELECT NOW()";
+        return rs = st.executeQuery(query);
+    }
 }
