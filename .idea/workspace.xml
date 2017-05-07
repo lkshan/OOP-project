@@ -4,7 +4,6 @@
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/runningExpo/progressController.java" afterPath="$PROJECT_DIR$/src/logistika/runningExpo/progressController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/runningExpo/runningExpoController.java" afterPath="$PROJECT_DIR$/src/logistika/runningExpo/runningExpoController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -170,14 +169,14 @@
       <file leaf-file-name="progressController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/logistika/runningExpo/progressController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="57" column="38" lean-forward="false" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+            <state relative-caret-position="-24">
+              <caret line="67" column="57" lean-forward="false" selection-start-line="67" selection-start-column="57" selection-end-line="67" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#936#3143#0" expanded="true" />
-                <element signature="e#1044#3118#0" expanded="true" />
-                <element signature="e#3117#3118#0" expanded="true" />
-                <element signature="e#3142#3143#0" expanded="true" />
+                <element signature="e#936#3275#0" expanded="true" />
+                <element signature="e#1044#3250#0" expanded="true" />
+                <element signature="e#3249#3250#0" expanded="true" />
+                <element signature="e#3274#3275#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1144,7 +1143,7 @@
       <workItem from="1492066833238" duration="1197000" />
       <workItem from="1492585585508" duration="41523000" />
       <workItem from="1493719861952" duration="47233000" />
-      <workItem from="1494112524977" duration="10632000" />
+      <workItem from="1494112524977" duration="10872000" />
     </task>
     <task id="LOCAL-00001" summary="Inserting orders to DB, refresh orderList">
       <created>1490883281829</created>
@@ -1244,11 +1243,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494114017270</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="ProgressBar works&#10;">
+      <created>1494124273789</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1494124273789</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211226000" />
+    <option name="totallyTimeSpent" value="211466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
@@ -1311,7 +1317,8 @@
     <MESSAGE value="Create table after clicking Add button in Create Expo scene&#10;adding to table" />
     <MESSAGE value="Creating expo successfuly done,&#10;adding expedition to DB&#10;removing running orders from myOrder table in DB&#10;!! NO ORDER VERIFICATION FOR CHOSEN VEHICLE" />
     <MESSAGE value="Running expedition list - show expedition&#10;Show detail of expedition&#10;ProgressBar for showing expedition progress&#10;!! No useful data in progressBar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Running expedition list - show expedition&#10;Show detail of expedition&#10;ProgressBar for showing expedition progress&#10;!! No useful data in progressBar" />
+    <MESSAGE value="ProgressBar works&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ProgressBar works&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1833,14 +1840,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logistika/runningExpo/progressController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="57" column="38" lean-forward="false" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+        <state relative-caret-position="-24">
+          <caret line="67" column="57" lean-forward="false" selection-start-line="67" selection-start-column="57" selection-end-line="67" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#936#3143#0" expanded="true" />
-            <element signature="e#1044#3118#0" expanded="true" />
-            <element signature="e#3117#3118#0" expanded="true" />
-            <element signature="e#3142#3143#0" expanded="true" />
+            <element signature="e#936#3275#0" expanded="true" />
+            <element signature="e#1044#3250#0" expanded="true" />
+            <element signature="e#3249#3250#0" expanded="true" />
+            <element signature="e#3274#3275#0" expanded="true" />
           </folding>
         </state>
       </provider>

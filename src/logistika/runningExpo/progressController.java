@@ -60,13 +60,15 @@ public class progressController {
                                     updateProgress(i, time*10000);
                                     Thread.sleep(10);
                                 }
+                                System.out.println("Incomplete");
                             }
                             else {
                                 //titleLabel.setText("100%");
-                                for (i = 99; i < 100; i++){
+                                for (i = 999; i < 1000; i++){
                                     updateProgress(i, 100);
                                     Thread.sleep(10);
                                 }
+                                System.out.println("Complete");
                             }
                             return i;
                             /*for (i = 0; i < 1000; i++){
@@ -86,7 +88,7 @@ public class progressController {
 
         centralAnchorPane.setTopAnchor(pbPrimary, 10.0);
         centralAnchorPane.getChildren().add(pbPrimary);
-
+        titleLabel.setText("Selected expedition: "+runningExpoController.getSelectedExpedition());
         thread.restart();
         /*btnStart.setText("Start");
         btnStart.setOnAction(e -> {
