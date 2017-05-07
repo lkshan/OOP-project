@@ -247,4 +247,19 @@ public class DBConnection {
         String query = "SELECT NOW()";
         return rs = st.executeQuery(query);
     }
+
+    public ResultSet getOrdersByExpId(int id) throws SQLException {
+        String query = "SELECT runningOrders.id_order, cities.name, storages.name, runningOrders.distance, runningOrders.specifying FROM runningOrders INNER JOIN cities ON runningOrders.id_city = cities.id_city INNER JOIN storages ON runningOrders.id_storage = storages.id_storage WHERE runningOrders.id_expedition = "+id;
+        return rs = st.executeQuery(query);
+    }
+
+    public ResultSet getCountOfRowsById(int id) throws SQLException {
+        String query = "SELECT COUNT(*) FROM `runningOrders` WHERE `id_expedition` = "+id;
+        return rs = st.executeQuery(query);
+    }
+
+    public void removeRunningOrderById(int id) throws SQLException {
+        String query = "DELETE FROM `runningOrders` WHERE `id_order` = "+id;
+        st.executeUpdate(query);
+    }
 }

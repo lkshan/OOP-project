@@ -483,6 +483,13 @@ public class Main extends Application{
         mainLayout.setCenter(runningExpo);
     }
 
+    public static void showDoneExpeditionScene() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("doneOrders/doneOrders.fxml"));
+        BorderPane doneOrders = loader.load();
+        mainLayout.setCenter(doneOrders);
+    }
+
     public static void overWriteId(){
         int i = 1;
         for (ShopGood shopGood : shopGoodArrayList){

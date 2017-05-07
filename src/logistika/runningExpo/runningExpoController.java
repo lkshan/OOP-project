@@ -59,7 +59,7 @@ public class runningExpoController {
         rs = connection.getAllExpeditions();
         while (rs.next()){
             ExpeditionStatus expedition = new ExpeditionStatus(rs.getInt("id_expedition"), rs.getInt("totalDistance"), rs.getTimestamp("beginDate"), rs.getDouble("totalTime"), rs.getDouble("costs"), rs.getDouble("profit"));
-            expedition.setStatus(createStatus(rs.getTimestamp("beginDate"), rs.getDouble("totalTime")));
+            //expedition.setStatus(createStatus(rs.getTimestamp("beginDate"), rs.getDouble("totalTime")));
             expeditionsAL.add(expedition);
         }
 
@@ -114,18 +114,24 @@ public class runningExpoController {
     @FXML
     public void showProgress() throws IOException {
         selectedExpedition = intToStr(id_expeditionTextField.getText());
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("runningExpo/progress.fxml"));
-        BorderPane progress = loader.load();
+        int i = 0;
+        for (ExpeditionStatus expeditionStatus : expeditionsAL){
+            if (expeditionStatus.getId_expedition() == selectedExpedition) i = 1;
+        }
+        if (i == 1){
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("runningExpo/progress.fxml"));
+            BorderPane progress = loader.load();
 
-        Stage progressStage = new Stage();
-        progressStage.setTitle("Progress");
-        progressStage.initModality(Modality.WINDOW_MODAL);
-        progressStage.initOwner(Main.getPrimaryStage());
-        Scene scene = new Scene(progress);
-        progressStage.setScene(scene);
-        progressStage.showAndWait();
-
+            Stage progressStage = new Stage();
+            progressStage.setTitle("Progress");
+            progressStage.initModality(Modality.WINDOW_MODAL);
+            progressStage.initOwner(Main.getPrimaryStage());
+            Scene scene = new Scene(progress);
+            progressStage.setScene(scene);
+            progressStage.showAndWait();
+        }
+        else System.out.println("Vybrana expedicia neexistuje");
         /*final Service thread = new Service<Integer>() {
             @Override
             protected Task<Integer> createTask() {

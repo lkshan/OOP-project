@@ -111,6 +111,7 @@ public class progressController {
             }
         });*/
         btnClose.setOnAction(e -> {
+            thread.cancel();
             Stage stage = (Stage) btnClose.getScene().getWindow();
             stage.close();
         });

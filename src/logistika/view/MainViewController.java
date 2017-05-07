@@ -15,8 +15,12 @@ public class MainViewController {
     @FXML
     private Label cashLabel;
 
+    public void setCashLabelText() {
+        initialize();
+    }
+
     @FXML
-    private void initialize(){
+    public void initialize(){
         String str = ""+Main.getCash()+"$";
         cashLabel.setText(str);
     }

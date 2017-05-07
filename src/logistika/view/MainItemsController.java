@@ -58,4 +58,8 @@ public class MainItemsController {
     private void goRunningExpo() throws IOException{
         main.showRunningExpoScene();
     }
+    @FXML
+    private void goDoneOrders() throws IOException {
+        main.showDoneExpeditionScene();
+    }
 }
