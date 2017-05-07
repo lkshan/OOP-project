@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logistika/runningExpo/Expedition.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logistika/runningExpo/ExpeditionStatus.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logistika/runningExpo/progressController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logistika/runningExpo/runningExpoController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/DBConnection.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/DBConnection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main$echoOrder.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main$echoOrder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/orderlist/OrderList.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/orderlist/OrderList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainItemsController.class" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainItemsController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainItems.fxml" afterPath="$PROJECT_DIR$/out/production/OOP-project/logistika/view/MainItems.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/DBConnection.java" afterPath="$PROJECT_DIR$/src/logistika/DBConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/Main.java" afterPath="$PROJECT_DIR$/src/logistika/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/view/MainItems.fxml" afterPath="$PROJECT_DIR$/src/logistika/view/MainItems.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/view/MainItemsController.java" afterPath="$PROJECT_DIR$/src/logistika/view/MainItemsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/runningExpo/progressController.java" afterPath="$PROJECT_DIR$/src/logistika/runningExpo/progressController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logistika/runningExpo/runningExpoController.java" afterPath="$PROJECT_DIR$/src/logistika/runningExpo/runningExpoController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -153,12 +141,10 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logistika/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1335">
-              <caret line="126" column="56" lean-forward="false" selection-start-line="126" selection-start-column="56" selection-end-line="126" selection-end-column="56" />
+            <state relative-caret-position="244">
+              <caret line="493" column="4" lean-forward="true" selection-start-line="493" selection-start-column="4" selection-end-line="503" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1763#1764#0" expanded="true" />
-                <element signature="e#1798#1799#0" expanded="true" />
                 <element signature="class#echoOrder#0;class#Main#0" expanded="false" />
               </folding>
             </state>
@@ -168,10 +154,14 @@
       <file leaf-file-name="runningExpoController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logistika/runningExpo/runningExpoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state relative-caret-position="124">
+              <caret line="84" column="4" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="110" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1217#1218#0" expanded="true" />
+                <element signature="e#1253#1254#0" expanded="true" />
+                <element signature="e#1302#1303#0" expanded="true" />
+                <element signature="e#1343#1344#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -180,14 +170,14 @@
       <file leaf-file-name="progressController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/logistika/runningExpo/progressController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+            <state relative-caret-position="216">
+              <caret line="57" column="38" lean-forward="false" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#770#1298#0" expanded="true" />
-                <element signature="e#878#1273#0" expanded="true" />
-                <element signature="e#1272#1273#0" expanded="true" />
-                <element signature="e#1297#1298#0" expanded="true" />
+                <element signature="e#936#3143#0" expanded="true" />
+                <element signature="e#1044#3118#0" expanded="true" />
+                <element signature="e#3117#3118#0" expanded="true" />
+                <element signature="e#3142#3143#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -208,7 +198,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1140">
               <caret line="92" column="45" lean-forward="false" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1152,7 +1144,7 @@
       <workItem from="1492066833238" duration="1197000" />
       <workItem from="1492585585508" duration="41523000" />
       <workItem from="1493719861952" duration="47233000" />
-      <workItem from="1494112524977" duration="1354000" />
+      <workItem from="1494112524977" duration="10632000" />
     </task>
     <task id="LOCAL-00001" summary="Inserting orders to DB, refresh orderList">
       <created>1490883281829</created>
@@ -1245,15 +1237,22 @@
       <option name="project" value="LOCAL" />
       <updated>1494034874215</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Running expedition list - show expedition&#10;Show detail of expedition&#10;ProgressBar for showing expedition progress&#10;!! No useful data in progressBar">
+      <created>1494114017270</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1494114017270</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201948000" />
+    <option name="totallyTimeSpent" value="211226000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1270,7 +1269,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.175" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.175" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1311,7 +1310,8 @@
     <MESSAGE value="Create expedition formular,&#10;selection of orders" />
     <MESSAGE value="Create table after clicking Add button in Create Expo scene&#10;adding to table" />
     <MESSAGE value="Creating expo successfuly done,&#10;adding expedition to DB&#10;removing running orders from myOrder table in DB&#10;!! NO ORDER VERIFICATION FOR CHOSEN VEHICLE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating expo successfuly done,&#10;adding expedition to DB&#10;removing running orders from myOrder table in DB&#10;!! NO ORDER VERIFICATION FOR CHOSEN VEHICLE" />
+    <MESSAGE value="Running expedition list - show expedition&#10;Show detail of expedition&#10;ProgressBar for showing expedition progress&#10;!! No useful data in progressBar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Running expedition list - show expedition&#10;Show detail of expedition&#10;ProgressBar for showing expedition progress&#10;!! No useful data in progressBar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1332,8 +1332,6 @@
           <caret line="20" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1763#1764#0" expanded="true" />
-            <element signature="e#1798#1799#0" expanded="true" />
             <element signature="class#echoOrder#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -1608,11 +1606,11 @@
         <state relative-caret-position="276">
           <caret line="209" column="8" lean-forward="false" selection-start-line="209" selection-start-column="8" selection-end-line="209" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1143#1152#0" expanded="true" />
-            <element signature="e#7671#7679#0" expanded="true" />
-            <element signature="e#8104#8112#0" expanded="true" />
-            <element signature="e#8607#8615#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1143#1152#0" expanded="false" />
+            <element signature="e#7671#7679#0" expanded="false" />
+            <element signature="e#8104#8112#0" expanded="false" />
+            <element signature="e#8607#8615#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1692,7 +1690,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1140">
           <caret line="92" column="45" lean-forward="false" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1790,19 +1790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="126" column="56" lean-forward="false" selection-start-line="126" selection-start-column="56" selection-end-line="126" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1763#1764#0" expanded="true" />
-            <element signature="e#1798#1799#0" expanded="true" />
-            <element signature="class#echoOrder#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/javafx-src.zip!/javafx/concurrent/Task.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -1819,26 +1806,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logistika/runningExpo/runningExpoController.java">
+    <entry file="file://$PROJECT_DIR$/src/logistika/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        <state relative-caret-position="244">
+          <caret line="493" column="4" lean-forward="true" selection-start-line="493" selection-start-column="4" selection-end-line="503" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="class#echoOrder#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logistika/runningExpo/runningExpoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="84" column="4" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="110" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1217#1218#0" expanded="true" />
+            <element signature="e#1253#1254#0" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logistika/runningExpo/progressController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="57" column="38" lean-forward="false" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#770#1298#0" expanded="true" />
-            <element signature="e#878#1273#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1297#1298#0" expanded="true" />
+            <element signature="e#936#3143#0" expanded="true" />
+            <element signature="e#1044#3118#0" expanded="true" />
+            <element signature="e#3117#3118#0" expanded="true" />
+            <element signature="e#3142#3143#0" expanded="true" />
           </folding>
         </state>
       </provider>

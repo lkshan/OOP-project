@@ -24,14 +24,27 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.DoubleSummaryStatistics;
 
+import static java.lang.Math.pow;
+
 /**
  * Created by lukashanincik on 06/05/2017.
  */
 public class runningExpoController {
     @FXML
+    private TextField id_expeditionTextField;
+    @FXML
     private AnchorPane centralAnchorPane;
     private TableView runningExpoTL;
-    private ArrayList<ExpeditionStatus> expeditionsAL = new ArrayList<ExpeditionStatus>();
+    private static ArrayList<ExpeditionStatus> expeditionsAL = new ArrayList<ExpeditionStatus>();
+    private static int selectedExpedition;
+
+    public static ArrayList<ExpeditionStatus> getExpeditionsAL() {
+        return expeditionsAL;
+    }
+
+    public static int getSelectedExpedition() {
+        return selectedExpedition;
+    }
 
     @FXML
     public void initialize() throws SQLException {
@@ -100,6 +113,7 @@ public class runningExpoController {
 
     @FXML
     public void showProgress() throws IOException {
+        selectedExpedition = intToStr(id_expeditionTextField.getText());
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("runningExpo/progress.fxml"));
         BorderPane progress = loader.load();
@@ -159,5 +173,16 @@ public class runningExpoController {
                 btnStart.setText("Start");
             }
         });*/
+    }
+    public static int intToStr(String str){
+        int id = 0;
+        for (int i = 0; i < str.length(); i++){
+            char c = str.charAt(i);
+            int tempt=0;
+            tempt = (int) c;
+            tempt -= 48;
+            id += tempt * pow(10, (str.length() - i)-1);
+        }
+        return id;
     }
 }
