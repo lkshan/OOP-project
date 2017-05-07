@@ -23,12 +23,15 @@ import logistika.orderlist.OrderList;
 import logistika.shop.ShopGood;
 import logistika.shop.StorageExtensions;
 import logistika.vehicles.Vehicle;
+import logistika.view.MainViewController;
 
 import java.io.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import static java.lang.Math.PI;
 import static java.lang.Math.pow;
@@ -488,6 +491,13 @@ public class Main extends Application{
         loader.setLocation(Main.class.getResource("doneOrders/doneOrders.fxml"));
         BorderPane doneOrders = loader.load();
         mainLayout.setCenter(doneOrders);
+    }
+
+    public static void showCreateOrderScene() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("createOrder/createOrder.fxml"));
+        BorderPane createOrder = loader.load();
+        mainLayout.setCenter(createOrder);
     }
 
     public static void overWriteId(){

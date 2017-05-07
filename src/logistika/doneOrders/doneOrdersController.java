@@ -56,7 +56,7 @@ public class doneOrdersController {
         }
         if (found == 1){
             DBConnection connection = new DBConnection();
-            //connection.removeRunningOrderById(id);
+            connection.removeRunningOrderById(id);
             Main.setCash(Main.getCash() + profit.intValue());
             //System.out.println(Main.getCash());
             //MainViewController.setCashLabelText();

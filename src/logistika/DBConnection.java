@@ -262,4 +262,13 @@ public class DBConnection {
         String query = "DELETE FROM `runningOrders` WHERE `id_order` = "+id;
         st.executeUpdate(query);
     }
+
+    public ResultSet getAllStoragesWithCities() throws SQLException {
+        String query = "SELECT DISTINCT storages.name, storages.specifying, cities.name, cities.x, cities.y FROM storages INNER JOIN cities ON storages.position = cities.id_city";
+        return rs = st.executeQuery(query);
+    }
+    public ResultSet getDistinctStorageNames() throws SQLException {
+        String query = "SELECT DISTINCT `name` FROM `storages`";
+        return rs = st.executeQuery(query);
+    }
 }

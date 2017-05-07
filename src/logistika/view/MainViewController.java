@@ -1,10 +1,16 @@
 package logistika.view;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.util.Duration;
 import logistika.Main;
 
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by lukashanincik on 17/03/2017.
@@ -15,14 +21,19 @@ public class MainViewController {
     @FXML
     private Label cashLabel;
 
-    public void setCashLabelText() {
-        initialize();
-    }
+    final Timeline timeline = new Timeline(
+            new KeyFrame(
+                    Duration.millis( 1000 ),
+                    event -> {
+                        cashLabel.setText(Main.getCash()+"$");
+                    }
+            )
+    );
 
     @FXML
     public void initialize(){
-        String str = ""+Main.getCash()+"$";
-        cashLabel.setText(str);
+        timeline.setCycleCount( Animation.INDEFINITE );
+        timeline.play();
     }
 
     @FXML
@@ -34,4 +45,5 @@ public class MainViewController {
     private void addStorage() throws IOException {
         main.showFirstStorage();
     }
+
 }

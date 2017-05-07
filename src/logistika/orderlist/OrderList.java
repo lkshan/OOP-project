@@ -33,7 +33,7 @@ public class OrderList {
     @FXML
     private javafx.scene.control.TextField selectOrderTextFIeld;
     private Main main;
-    private static ArrayList<Order> Objednavky = new ArrayList<Order>();
+    public static ArrayList<Order> Objednavky = new ArrayList<Order>();
 
     public ArrayList<Order> getObjednavky() {
         return Objednavky;

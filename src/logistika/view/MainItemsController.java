@@ -62,4 +62,8 @@ public class MainItemsController {
     private void goDoneOrders() throws IOException {
         main.showDoneExpeditionScene();
     }
+    @FXML
+    private void goCreateOrders() throws IOException {
+        main.showCreateOrderScene();
+    }
 }
